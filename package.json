@@ -1,7 +1,7 @@
 {
-  "name": "engine-inner-api",
+  "name": "blockman-xgo",
   "version": "1.0.0",
-  "description": "Node.js inner API converted from Flask implementation",
+  "description": "BlockmanXGO Fan-Made Server",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
