@@ -62,7 +62,7 @@ app.use(express.urlencoded({
 // ======================
 const corsOptions = {
   origin: [
-    'https://BliXO-Api-Inner.com',
+    'https://blockman-xgo.onrender.com',
     'http://localhost:38199',
     'http://127.0.0.1:38199',
     'http://localhost:3000',
