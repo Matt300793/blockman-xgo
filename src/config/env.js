@@ -1,17 +1,21 @@
 const path = require('path');
 
 const PORT = parseInt(process.env.PORT || '38199', 10);
-const SQLITE_FILE = process.env.SQLITE_FILE || path.join(process.cwd(), 'blockmango.db');
-const GAMEAIDE_DB_FILE = process.env.GAMEAIDE_DB_FILE || path.join(process.cwd(), 'gameaide.db');
-const REDIS_HOST = process.env.REDIS_HOST || '127.0.0.1';
-const REDIS_PORT = parseInt(process.env.REDIS_PORT || '6379', 10);
-const SECRET_KEY = process.env.SECRET_KEY || 'pq0194mxoqfh48L362G6R09T737E273X';
+
+// Fallbacks are removed to prevent accidental leakage in your source control (e.g., GitHub)
+const SECRET_KEY = process.env.SECRET_KEY;
+const REDIS_URL = process.env.REDIS_URL;
+const MYSQL_URL = process.env.MYSQL_URL;
+
+// Throw an early error if the server is missing critical database variables
+if (!REDIS_URL || !MYSQL_URL || !SECRET_KEY) {
+  console.error('❌ ERROR: Missing required environment variables (REDIS_URL, MYSQL_URL, or SECRET_KEY). Exiting...');
+  process.exit(1);
+}
 
 module.exports = {
   PORT,
-  SQLITE_FILE,
-  GAMEAIDE_DB_FILE,
-  REDIS_HOST,
-  REDIS_PORT,
   SECRET_KEY,
+  REDIS_URL,
+  MYSQL_URL,
 };
