@@ -27,6 +27,19 @@ const gameRoutes = require('./routes/gameRoutes');
 const app = express();
 
 // ======================
+// Health Check Endpoint
+// ======================
+// Placed at the very top so Render's health prober never gets blocked by CORS or Rate Limiting
+app.get('/health', (req, res) => {
+  res.status(200).json({
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+    memoryUsage: process.memoryUsage()
+  });
+});
+
+// ======================
 // Security Middleware
 // ======================
 app.use(helmet());
@@ -75,18 +88,6 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-
-// ======================
-// Health Check Endpoint
-// ======================
-app.get('/health', (req, res) => {
-  res.status(200).json({
-    status: 'ok',
-    timestamp: new Date().toISOString(),
-    uptime: process.uptime(),
-    memoryUsage: process.memoryUsage()
-  });
-});
 
 // ======================
 // Request Timeout
@@ -157,11 +158,7 @@ const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-// Handle server events
-server.on('connection', (socket) => {
-  socket.setTimeout(30 * 1000); // 30 seconds
-  console.log('New connection established');
-});
+// Note: Custom 'connection' listener removed to prevent log flooding from Render health checks.
 
 // Handle unhandled promise rejections
 process.on('unhandledRejection', (err) => {
@@ -176,4 +173,3 @@ process.on('uncaughtException', (err) => {
 });
 
 module.exports = { app, server };
-  
