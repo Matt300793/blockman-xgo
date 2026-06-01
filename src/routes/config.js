@@ -5,7 +5,7 @@ const path = require('path');
 const { getPlayerIdentityConfig } = require('../services/activityService');
 
 // GET /config/files/player-identity-config
-router.get('/config/files/player-identity-config', (req, res) => {
+router.get('/config/files/player-identity-config.json', (req, res) => {
   const { statusCode, body } = getPlayerIdentityConfig();
   return res.status(statusCode).json(body);
 });
@@ -13,7 +13,7 @@ router.get('/config/files/player-identity-config', (req, res) => {
 // Helper function to dynamically read the config file from your database folder
 const serveBlockmodsConfig = (req, res) => {
   // Traces path from src/routes/config.js back to database/appconfigs/blockmods_config
-  const configFilePath = path.join(__dirname, '../../../database/appconfigs/blockmods_config');
+  const configFilePath = path.join(__dirname, '../../../database/appconfigs/blockmods_config.json');
   
   fs.readFile(configFilePath, 'utf8', (err, data) => {
     if (err) {
@@ -38,13 +38,13 @@ const serveBlockmodsConfig = (req, res) => {
 };
 
 // FIX: Catch the exact clean path your game engine client is hitting
-router.get('/config/files/blockmods-config', serveBlockmodsConfig);
+router.get('/config/files/blockmods-config.json', serveBlockmodsConfig);
 
 // Alias: Keep the versioned path active just in case legacy clients ask for it
-router.get('/config/files/blockmods-config-v1', serveBlockmodsConfig);
+router.get('/config/files/blockmods-config-v1.json', serveBlockmodsConfig);
 
 // GET /config/files/blockymods-check-version
-router.get('/config/files/blockymods-check-version', (req, res) => {
+router.get('/config/files/blockymods-check-version.json', (req, res) => {
   return res.status(200).json({
     code: 1,
     message: 'Success',
@@ -57,7 +57,7 @@ router.get('/config/files/blockymods-check-version', (req, res) => {
 });
 
 // GET /config/files/dress-guide-config
-router.get('/config/files/dress-guide-config', (req, res) => {
+router.get('/config/files/dress-guide-config.json', (req, res) => {
   return res.status(200).json({
     code: 1,
     message: 'Success',
@@ -70,7 +70,7 @@ router.get('/config/files/dress-guide-config', (req, res) => {
 
 const editorData = require('../Jsons/editor.json');
 
-router.get('/config/files/game-detail-to-editor', (req, res) => {
+router.get('/config/files/game-detail-to-editor.json', (req, res) => {
   try {
     res.status(200).json({
       code: 1,
