@@ -132,7 +132,7 @@ router.post('/user/api/v1/user/register', async (req, res) => {
     await db.query('INSERT IGNORE INTO Wallet (userId, gold, gcubes, bcubes) VALUES (?, ?, ?, ?)', [userId, 0, 0, 0]);
 
     const token = genToken();
-    const baseUrl = `http://YOUR_SERVER_IP:38199`;
+    const baseUrl = `https://blockman-xgo.onrender.com`;
 
     return res.status(200).json({
       code: 1,
