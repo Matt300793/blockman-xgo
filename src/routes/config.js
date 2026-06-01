@@ -10,10 +10,15 @@ router.get('/config/files/player-identity-config', (req, res) => {
   return res.status(statusCode).json(body);
 });
 
-// Helper function to dynamically read the config file from your database folder
+// Helper function to dynamically read the config file supporting both casing styles
 const serveBlockmodsConfig = (req, res) => {
-  // Traces path from src/routes/config.js back to database/appconfigs/blockmods_config.json
-  const configFilePath = path.join(__dirname, '../../../database/appconfigs/blockmods_config.json');
+  // Try the capitalized path matching your current GitHub setup
+  let configFilePath = path.join(__dirname, '../../../Database/AppConfigs/blockmods_config.json');
+  
+  // Fallback to lowercase if the directory ever gets renamed
+  if (!fs.existsSync(configFilePath)) {
+    configFilePath = path.join(__dirname, '../../../database/appconfigs/blockmods_config.json');
+  }
   
   fs.readFile(configFilePath, 'utf8', (err, data) => {
     if (err) {
@@ -37,10 +42,8 @@ const serveBlockmodsConfig = (req, res) => {
   });
 };
 
-// REMOVED .json EXTENSION: Matches exactly what the game engine requests
+// Route assignments matching exactly what the client requests
 router.get('/config/files/blockmods-config', serveBlockmodsConfig);
-
-// Alias: Keep the versioned path active just in case legacy clients ask for it
 router.get('/config/files/blockmods-config-v1', serveBlockmodsConfig);
 
 // GET /config/files/blockymods-check-version
