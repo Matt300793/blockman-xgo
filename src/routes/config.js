@@ -13,7 +13,7 @@ router.get('/config/files/player-identity-config', (req, res) => {
 // Helper function to dynamically read the config file from your database folder
 const serveBlockmodsConfig = (req, res) => {
   // Traces path from src/routes/config.js back to database/appconfigs/blockmods_config
-  const configFilePath = path.join(__dirname, '../../database/appconfigs/blockmods_config');
+  const configFilePath = path.join(__dirname, '../../../database/appconfigs/blockmods_config');
   
   fs.readFile(configFilePath, 'utf8', (err, data) => {
     if (err) {
