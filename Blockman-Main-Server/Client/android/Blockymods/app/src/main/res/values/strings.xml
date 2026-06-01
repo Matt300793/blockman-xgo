@@ -1,0 +1,202 @@
+<resources>
+    <string name="facebook_app_id">290796731324488</string>
+    <string name="fb_login_protocol_scheme">fb290796731324488</string>
+    <string name="td_app_id">D2D70DC78C2A45BD99D3983FB331F37D</string>
+
+    <string name="app_name">Blocky Mods</string>
+    <string name="finish">Done</string>
+    <string name="sure">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="nothing"> </string>
+    <string name="modify_success">Modify success</string>
+    <string name="tip">Tip</string>
+    <string name="close">Close</string>
+    <string name="coming_soon">Coming soon</string>
+    <string name="next">Next</string>
+    <string name="exit">Click again to quit</string>
+
+    <string name="main_game">Game</string>
+    <string name="main_dress">Dressing</string>
+    <string name="main_chat">Chat</string>
+    <string name="main_more">More</string>
+
+    <string name="me_shop">Store</string>
+    <string name="me_recharge">Top up</string>
+    <string name="me_setting">Setting</string>
+    <string name="me_help">Help</string>
+
+    <string name="account_title">Blocky Mods</string>
+    <string name="account_name">Account</string>
+    <string name="account_password">Password</string>
+    <string name="account_retype_password">Confirm password</string>
+    <string name="account_login">Login</string>
+    <string name="account_register">Register</string>
+    <string name="account_exit_login">Exit</string>
+    <string name="account_forget_password">Forget password</string>
+    <string name="account_create_account">Create account</string>
+    <string name="account_has_account">Already have a account</string>
+    <string name="account_third_party_login">— Third party account login—</string>
+    <string name="account_enter_nick_name">Enter nickname</string>
+    <string name="account_upload_icon">Upload</string>
+    <string name="account_sex">Gender：</string>
+    <string name="account_male">Male</string>
+    <string name="account_female">Female</string>
+    <string name="account_year">Year</string>
+    <string name="account_month">Month</string>
+    <string name="account_day">Day</string>
+    <string name="account_done">Done</string>
+    <string name="account_nick_name_empty">Nicknames can\'t be empty</string>
+    <string name="account_sex_empty">Choose gender</string>
+    <string name="account_account_empty">Account cannot be empty</string>
+    <string name="account_password_less_6">Password must not be less than 6 bits</string>
+    <string name="account_password_empty">Password cannot be empty</string>
+    <string name="account_confirm_password_empty">Password cannot be empty</string>
+    <string name="account_password_not_compare">The password is inconsistent</string>
+    <string name="account_email_is_empty">Mailbox cannot be empty</string>
+    <string name="account_choose_photo">Select</string>
+    <string name="account_exist">User already exists</string>
+    <string name="account_not_exist">User does not exist</string>
+    <string name="account_nickname_exist">Nickname already exists</string>
+    <string name="account_message_exist">Account information has been improved</string>
+    <string name="account_login_success">Login success</string>
+    <string name="account_register_failed">Register failed</string>
+    <string name="account_register_success">Register success</string>
+    <string name="account_upload_icon_failed">Upload failed</string>
+    <string name="account_register_finish_account">Username: %s</string>
+    <string name="account_register_finish_password">Password: %s</string>
+    <string name="account_register_finish_hint">*Please keep in mind your username and password</string>
+    <string name="account_register_finish_save">Save</string>
+    <string name="account_register_finish_save_success">Save success</string>
+
+    <string name="item_view_personal_details">Personal info</string>
+    <string name="item_view_change_nick_name">Nickname modify</string>
+    <string name="item_view_nick_name">Nickname</string>
+    <string name="item_view_icon">Icon</string>
+    <string name="item_view_sex">Gender</string>
+    <string name="item_view_birthday">Birthday</string>
+    <string name="item_view_details">Personal profile</string>
+    <string name="item_view_account_safe">Security</string>
+    <string name="item_view_reminder">Reminder</string>
+    <string name="item_view_question">Feedback</string>
+    <string name="item_view_check_version">Update</string>
+    <string name="item_view_about">About Blocky Mods</string>
+    <string name="item_view_change_password">Modify password</string>
+    <string name="item_view_click_modify">Modify</string>
+    <string name="item_view_email">Mailbox</string>
+    <string name="item_view_no_email">Unbound</string>
+    <string name="item_view_phone">Phone number</string>
+    <string name="item_view_bind_phone">Phone binding</string>
+    <string name="item_view_bind_email">Mailbox binding</string>
+    <string name="item_view_forget_password">Password reset</string>
+
+    <string name="change_name_hint">Enter nickname…</string>
+    <string name="change_name_success">Nickname modify success</string>
+    <string name="change_name_no_support">Not support modify nickname</string>
+    <string name="change_detail_hint">Introduce yourself…</string>
+    <string name="change_password_default_hint">Enter the original password</string>
+    <string name="change_password_new_hint">Enter a new password</string>
+    <string name="change_password_reply_hint">Reenter the new password</string>
+    <string name="change_password_wrong">Password is wrong</string>
+    <string name="change_password_success">Password modify success</string>
+    <string name="change_password_old_empty">Original password can not be empty</string>
+    <string name="change_password_new_empty">New password can not be empty</string>
+    <string name="change_password_email_empty">E-mail can not be empty</string>
+    <string name="change_password_email_not_bind">The mailbox does not bind the account</string>
+    <string name="change_password_email_success">Send success. Please confirm it in email</string>
+
+    <string name="bind_phone_place">Location</string>
+    <string name="bind_phone_place_hint">China+86</string>
+    <string name="bind_phone_phone_hint">Enter phone number</string>
+    <string name="bind_phone_code_hint">Input validation code</string>
+    <string name="bind_phone_get_code_hint">Get validation code</string>
+    <string name="bind_phone_code_send_success">Send success</string>
+    <string name="bind_phone_no_bind">Unbound</string>
+    <string name="bind_phone_no_bind_phone">Unbound phone number</string>
+    <string name="bind_phone_bind_success">Bind success</string>
+    <string name="bind_phone_unbind_success">Unbundling success</string>
+    <string name="bind_phone_phone_has_been_bind">The phone number has been used</string>
+    <string name="bind_phone_user_has_bind">The account has been bound to the phone</string>
+    <string name="bind_phone_send_code_failed">Failed to send verification code</string>
+    <string name="bind_phone_code_error">Verification code error</string>
+    <string name="bind_phone_un_bind">Unbound</string>
+    <string name="bind_phone_code_is_empty">The verification code cannot be empty</string>
+    <string name="bind_phone_unbind_error">Unbundling failed</string>
+    <string name="bind_phone_never_bind_phone">No binding phone</string>
+    <string name="bind_phone_phone_num">Phone number: %s</string>
+
+    <string name="bind_email_hint">Enter e-mail</string>
+    <string name="bind_email_code_hint">Enter email authentication code</string>
+    <string name="bind_email_pattern_error">Mailbox format error</string>
+    <string name="bind_email_not_exist">Mailbox does not exist</string>
+    <string name="bind_email_has_bind">The mailbox has been bound</string>
+    <string name="bind_email_user_has_bind">Mailbox already bound</string>
+    <string name="bind_email_bind">Binding</string>
+    <string name="bind_email_never_bind_email">Mailbox unbind</string>
+
+    <string name="icon_select_fails">Avatar clipping failed.Please try again</string>
+    <string name="reminder_open_remind">Open message push notice</string>
+    <string name="reminder_open_personal">Private message notice</string>
+    <string name="more_fragment_details">Introduction: %s</string>
+    <string name="more_fragment_no_details">Empty</string>
+    <string name="more_fragment_gold">$%d</string>
+    <string name="more_fragment_visitor">Guest</string>
+    <string name="more_fragment_no_login">Not login</string>
+    <string name="update_info_please_choose">Select</string>
+
+    <string name="game_fragment_recommend">Recommend</string>
+    <string name="game_fragment_lately_play">Recent</string>
+    <string name="game_fragment_friend_play">Friends\' playing</string>
+    <string name="game_fragment_classification">Classify</string>
+    <string name="game_fragment_change">Change</string>
+
+    <string name="game_item_title_text">Players</string>
+    <string name="game_item_type_text">%1$s | %2$s | %3$s</string>
+
+    <string name="game_detail_quick_enter">Quick in</string>
+    <string name="game_detail_introduction">Introduction</string>
+    <string name="game_details_default_detail">Empty</string>
+    <string name="game_detail_appreciation_not_login">Likes after login</string>
+    <string name="game_detail_appreciation_game_not_exist">Game does not exist</string>
+    <string name="game_detail_appreciation_game_has_appreciation">Can not repeat likes</string>
+    <string name="game_detail_appreciation_game_not_play">Likes after playing</string>
+
+    <string name="category_all">All</string>
+    <string name="category_pvp">PVP</string>
+    <string name="category_business">SIM</string>
+    <string name="category_adventure">AVG</string>
+    <string name="category_shootout">STG</string>
+    <string name="category_online_time">Uptime</string>
+    <string name="category_population">Likes</string>
+    <string name="category_appreciation">Popularity</string>
+    <string name="category_no_data">No games for the moment,Please choose another category</string>
+
+    <string name="connect_server_failure_error">Served connect failed,please try again.</string>
+    <string name="dialog_enter_game_timer">Server is busy,please waiting\n Waiting time: %s</string>
+    <string name="dialog_check_app_version_content">Update content</string>
+    <string name="dialog_check_app_version_failed">Failed to detect update</string>
+    <string name="dialog_button_update">Update</string>
+
+    <string name="app_is_latest">Blocky Mods is the latest version</string>
+    <string name="app_not_latest">Blocky Mods has a new version,update or not?</string>
+
+    <string name="fb_login_cancel">Facebook login cancelled</string>
+    <string name="fb_login_failed">Facebook login failed</string>
+
+    <string name="about_text">Copyright © 2017 Blocky Mods.</string>
+    <string name="about_text_2">All Right Reserved.</string>
+    <string name="about_version">Version </string>
+
+    <!--2017-11-29 11:45:33-->
+    <string name="account_account_less_4">Account must not be less than 4 bits</string>
+    <string name="account_nickname_less_6">Nickname must not be less than 6 bits</string>
+
+    <string name="dress_no_dress">No this type of dressing now </string>
+    <string name="dress_me_no_dress">No dressing in use now </string>
+    <string name="dress_success">Dressing success </string>
+    <string name="dress_failed">Failed,please retry</string>
+    <string name="change_sex_no_support"> No support for gender modification now</string>
+    <string name="dress_change_no_login">Replace dressing after login</string>
+    <string name="go_to_login">Re-login</string>
+
+
+</resources>

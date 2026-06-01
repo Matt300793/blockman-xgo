@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/llContent"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/color_editor_map_dialog_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space12dp">
+
+            <TextView
+                style="@style/TitleText12sp"
+                android:layout_width="2dp"
+                android:background="@color/color_title_text"/>
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/TitleText14sp"
+                android:layout_marginLeft="3dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvRename"
+            style="@style/EditorMapDialogItemStyle"
+            android:layout_marginBottom="@dimen/boldLineH"
+            android:text="@string/editor_map_rename"/>
+
+        <TextView
+            android:id="@+id/tvCopy"
+            style="@style/EditorMapDialogItemStyle"
+            android:layout_marginBottom="@dimen/boldLineH"
+            android:text="@string/editor_map_copy_map"/>
+
+        <TextView
+            android:id="@+id/tvModel"
+            style="@style/EditorMapDialogItemStyle"
+            android:text="@string/editor_map_model"/>
+
+    </LinearLayout>
+
+</LinearLayout>

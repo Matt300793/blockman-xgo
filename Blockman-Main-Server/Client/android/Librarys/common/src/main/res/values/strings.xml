@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">common</string>
+    <string name="loading">Loading…</string>
+    <string name="no_data">No data</string>
+
+    <string name="connect_server_time_out">Connect server time out.Please try again</string>
+    <string name="connect_server_no_connect">No network connection, please check</string>
+    <string name="connect_server_un_know">Request process has gone wrong. Please check the code.</string>
+    <string name="connect_error_code">Unknown code:%d,Please contact the administrator</string>
+    <!--2017-11-29 11:45:33-->
+    <string name="connect_repeat_login"> Account validation failed, please re-login</string>
+</resources>

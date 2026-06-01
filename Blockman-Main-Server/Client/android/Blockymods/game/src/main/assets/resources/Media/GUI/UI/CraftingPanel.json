@@ -1,0 +1,358 @@
+{
+    "Dialog": {
+        "Window": {
+            "Type": "StaticImage",
+            "Name": "CraftingPanel",
+            "Property": [
+                {
+                    "Name": "Area",
+                    "Value": "{{0,28},{0,26},{1,-28},{1,-26}}"
+                },
+                {
+                    "Name": "HexgonTopImage",
+                    "Value": ""
+                },
+                {
+                    "Name": "HexgonTopColor",
+                    "Value": "1 1 1 1"
+                },
+                {
+                    "Name": "HexgonSideImage",
+                    "Value": ""
+                },
+                {
+                    "Name": "HexgonSideColor",
+                    "Value": "1 1 1 1"
+                },
+                {
+                    "Name": "HexgonOverlayerImage",
+                    "Value": ""
+                },
+                {
+                    "Name": "HexgonOverlayerColor",
+                    "Value": "1 1 1 1"
+                }
+            ],
+            "Window": [
+                {
+                    "Type": "StaticImage",
+                    "Name": "CraftingPanel-Recipes-bg",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,0},{0,0},{0,520},{1,0}}"
+                        },
+                        {
+                            "Name": "StretchType",
+                            "Value": "NineGrid"
+                        },
+                        {
+                            "Name": "StretchOffset",
+                            "Value": "10 10 10 10"
+                        },
+                        {
+                            "Name": "ImageName",
+                            "Value": "set:gui_material.json image:wupindikuang"
+                        },
+                        {
+                            "Name": "HexgonTopImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonTopColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonSideImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonSideColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonOverlayerImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonOverlayerColor",
+                            "Value": "1 1 1 1"
+                        }
+                    ]
+                },
+                {
+                    "Type": "ScrollableInventory",
+                    "Name": "CraftingPanel-Recipes",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,20},{0,8},{0,500},{1,-8}}"
+                        },
+                        {
+                            "Name": "ColumnCount",
+                            "Value": "8"
+                        },
+                        {
+                            "Name": "SlotWidth",
+                            "Value": "60"
+                        },
+                        {
+                            "Name": "SlotHeight",
+                            "Value": "60"
+                        },
+                        {
+                            "Name": "ItemStackBackgroundColor",
+                            "Value": "0 0 0 0"
+                        },
+                        {
+                            "Name": "NumberVisibility",
+                            "Value": "1"
+                        },
+                        {
+                            "Name": "AutoColumnCount",
+                            "Value": "true"
+                        }
+                    ]
+                },
+                {
+                    "Type": "SlotTable",
+                    "Name": "CraftingPanel-Materials",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,274},{0,0},{0,470},{0,196}}"
+                        },
+                        {
+                            "Name": "HorizontalAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "RowCount",
+                            "Value": "3"
+                        },
+                        {
+                            "Name": "ColumnCount",
+                            "Value": "3"
+                        },
+                        {
+                            "Name": "HorizontalInterval",
+                            "Value": "8"
+                        },
+                        {
+                            "Name": "VerticalInterval",
+                            "Value": "8"
+                        },
+                        {
+                            "Name": "SlotWidth",
+                            "Value": "60"
+                        },
+                        {
+                            "Name": "SlotHeight",
+                            "Value": "60"
+                        },
+                        {
+                            "Name": "SlotStyle",
+                            "Value": "1"
+                        },
+                        {
+                            "Name": "ItemStackBackgroundColor",
+                            "Value": "0 0 0 0"
+                        },
+                        {
+                            "Name": "NumberVisibility",
+                            "Value": "0"
+                        }
+                    ]
+                },
+                {
+                    "Type": "StaticImage",
+                    "Name": "CraftingPanel-OutputArrow",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,274},{0,212},{0,331},{0,257}}"
+                        },
+                        {
+                            "Name": "HorizontalAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "ImageName",
+                            "Value": "set:gui_material.json image:jiantou_xia"
+                        },
+                        {
+                            "Name": "HexgonTopImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonTopColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonSideImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonSideColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonOverlayerImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonOverlayerColor",
+                            "Value": "1 1 1 1"
+                        }
+                    ]
+                },
+                {
+                    "Type": "StaticText",
+                    "Name": "CraftingPanel-OutputName",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,274},{0,278},{0,474},{0,303}}"
+                        },
+                        {
+                            "Name": "HorizontalAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "Text",
+                            "Value": "Output Name"
+                        },
+                        {
+                            "Name": "Touchable",
+                            "Value": "false"
+                        },
+                        {
+                            "Name": "TextHorzAlignment",
+                            "Value": "Centre"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Button",
+                    "Name": "CraftingPanel-CraftButton",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,274},{0,336},{0,534},{0,418}}"
+                        },
+                        {
+                            "Name": "HorizontalAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "StretchType",
+                            "Value": "NineGrid"
+                        },
+                        {
+                            "Name": "StretchOffset",
+                            "Value": "30 30 30 30"
+                        },
+                        {
+                            "Name": "NormalImage",
+                            "Value": "set:gui_material.json image:btn_bg_yellow"
+                        },
+                        {
+                            "Name": "PushedImage",
+                            "Value": "set:gui_material.json image:btn_bg_yellow"
+                        },
+                        {
+                            "Name": "SoundName",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonTopImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonTopColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonSideImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonSideColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonOverlayerImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonOverlayerColor",
+                            "Value": "1 1 1 1"
+                        }
+                    ],
+                    "Window": [
+                        {
+                            "Type": "ItemStack",
+                            "Name": "CraftingPanel-CraftButton-Icon",
+                            "Property": [
+                                {
+                                    "Name": "Area",
+                                    "Value": "{{0,25},{0,0},{0,75},{0,50}}"
+                                },
+                                {
+                                    "Name": "VerticalAlignment",
+                                    "Value": "Centre"
+                                },
+                                {
+                                    "Name": "HorizontalAlignment",
+                                    "Value": "Centre"
+                                },
+                                {
+                                    "Name": "Touchable",
+                                    "Value": "false"
+                                },
+                                {
+                                    "Name": "NumberVisibility",
+                                    "Value": "2"
+                                }
+                            ]
+                        },
+                        {
+                            "Type": "StaticText",
+                            "Name": "CraftingPanel-CraftButton-Text",
+                            "Property": [
+                                {
+                                    "Name": "Area",
+                                    "Value": "{{0,-25},{0,0},{0,25},{0,50}}"
+                                },
+                                {
+                                    "Name": "VerticalAlignment",
+                                    "Value": "Centre"
+                                },
+                                {
+                                    "Name": "HorizontalAlignment",
+                                    "Value": "Centre"
+                                },
+                                {
+                                    "Name": "Text",
+                                    "Value": "1 X"
+                                },
+                                {
+                                    "Name": "Touchable",
+                                    "Value": "false"
+                                },
+                                {
+                                    "Name": "TextHorzAlignment",
+                                    "Value": "Centre"
+                                },
+                                {
+                                    "Name": "TextVertAlignment",
+                                    "Value": "Centre"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,149 @@
+# 宁夏测试服配置
+defaultInstanceType: m5.xlarge
+defaultServiceCount: 2
+defaultServiceCpu: 0.3
+defaultServiceMemory: 0.75
+targetGroupEnalbed: True
+
+serviceTypes:
+  - type: service
+    instanceType: m5.xlarge
+    cpu: 0.1
+    memory: 0.2
+    count: 1
+    remix: remixinstall
+  - type: center
+    instanceType: m5.xlarge
+    cpu: 0.1
+    memory: 0.1
+    count: 1
+    remix: remixinstall
+  - type: gateway
+    instanceType: m5.xlarge
+    cpu: 0.1
+    memory: 0.1
+    count: 1 
+    remix: remixinstall
+  - type: eureka
+    instanceType: m5.xlarge
+    cpu:  0.1
+    memory: 0.1
+    count: 1
+    remix: remixinstall
+
+services:
+  - name: message-process
+    cpu: 0.1
+    memory: 0.1
+    count: 1
+    remix: remixinstall
+  - name: singleton-service
+    cpu: 0.1
+    memory: 0.1
+    count: 1
+  - name: web-service
+    cpu: 0.1
+    memory: 0.1
+    count: 1
+    remix: remixinstall
+  - name: game-center
+    cpu: 0.1
+    memory: 0.2
+    count: 1
+    remix: remixinstall
+
+serviceNames:
+  - auth-center
+  - clan-center
+  - decoration-center
+  - friend-center
+  - game-center
+  - mailbox-center
+  - msg-center
+  - pay-center
+  - user-center
+  - message-process
+  - activity-service
+  - charmingtown-service
+  - clan-service
+  - decoration-service
+  - eureka-service
+  - friend-service
+  - gamedata-service
+  - game-service
+  - gateway-service
+  - mailbox-service
+  - msg-service
+  - pay-service
+  - shop-service
+  - singleton-service
+  - user-service
+  - web-service
+  - gameaide-service
+  - mongo-center
+  - search-center
+  - bedwar-service
+  - gamemongo-center
+  - backpack-center
+  - backpack-service
+
+# base.09 image id
+imageId: ami-00cbdc2a9826dc0ed
+securityGroups: ['sg-075c44496f8285951','sg-051746dc2f10162b8']
+vpcId: vpc-08f7ec545f1ecf3e7
+subnetId: subnet-0f97c42f2e9647fe3
+#securityGroups: ['default', 'bmg.webservice']
+tags:
+  namespace: dev-jenkins-deploy-web
+  lang: java
+
+targetGroupEnalbed: true
+targetGroups:
+  - service: decoration-center
+    arn: arn:aws-cn:elasticloadbalancing:cn-northwest-1:733520899135:targetgroup/decoration-center-dev/7d7cc19bc2281e56
+  - service: game-center
+    arn: arn:aws-cn:elasticloadbalancing:cn-northwest-1:733520899135:targetgroup/game-center-dev/37668a5d604e28f3
+  - service: gamedata-service
+    arn: arn:aws-cn:elasticloadbalancing:cn-northwest-1:733520899135:targetgroup/gamedata-instances-dev/9baf4720d3134984
+  - service: gateway-service
+    arn: arn:aws-cn:elasticloadbalancing:cn-northwest-1:733520899135:targetgroup/gateway-isntances-dev/5acb0f2d18e4fd1a
+  - service: datareport-service
+    arn: arn:aws:elasticloadbalancing:us-east-1:163639519626:targetgroup/xyx-datatrport-service/6412eb9c1f0cdf8a
+
+# 预留cpu给操作系统使用
+reservedCpu: 
+  # fixed: 固定大小，fixed-service: 按服务数量叠加，每个服务固定大小
+  strategy: fixed
+  value: 0.3
+
+# 预留内存给操作系统使用
+reservedMemory: 
+  # fixed: 固定大小，fixed-service: 按服务数量叠加，每个服务固定大小
+  strategy: fixed
+  value: 0.5
+
+instanceTypeDetails:
+  - name: c5.xlarge
+    cpu: 4
+    memory: 8
+  - name: m4.large
+    cpu: 2
+    memory: 8
+  - name: t2.small
+    cpu: 1
+    memory: 2
+  - name: m5.large
+    cpu: 2
+    memory: 8
+  - name: m5.xlarge
+    cpu: 4
+    memory: 16
+
+profiles:
+  us-east-1: oversea
+  cn-northwest-1: ningxia-dev
+
+staticConfigs:
+  bucket: blockmango-res
+  groupKey: monitoring/config/webservice-groups.json
+  nodeGroupKey: monitoring/config/webservice-nodes-groups.json

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:background="@color/itemDefaultColor"
+        android:gravity="center">
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/borderLineColor"
+            android:layout_height="@dimen/borderLineHeight"/>
+
+        <ListView
+            android:id="@+id/lvCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/borderLineColor"
+            android:dividerHeight="0.5dp"
+            android:overScrollMode="never"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

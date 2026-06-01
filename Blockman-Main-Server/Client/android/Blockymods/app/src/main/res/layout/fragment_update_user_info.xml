@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="UpdateUserInfoViewModel"
+            type="com.sandboxol.blockymods.view.fragment.updateuserinfo.UpdateUserInfoViewModel"/>
+
+        <import type="com.sandboxol.blockymods.entity.AccountCenter"/>
+
+        <import type="com.sandboxol.blockymods.R"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            bind:onClickCommand="@{UpdateUserInfoViewModel.onIconClickCommand}"
+            android:background="@color/itemDefaultColor"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/defaultMargin"
+                android:layout_weight="1"
+                android:text="@string/item_view_icon"
+                android:textColor="@color/itemTextDefaultColor"
+                android:textSize="@dimen/textSize15Sp"/>
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="@dimen/headSizeDefault"
+                android:layout_height="@dimen/headSizeDefault"
+                bind:failedImageRes="@{R.mipmap.ic_head_default}"
+                bind:placeImageRes="@{R.mipmap.ic_head_default}"
+                bind:uri="@{AccountCenter.newInstance().picUrl}"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/defaultMargin"
+                android:layout_marginRight="@dimen/defaultMargin"
+                android:src="@mipmap/ic_arrow_right"/>
+        </LinearLayout>
+
+        <com.sandboxol.blockymods.view.widget.ItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            bind:leftText="@string/item_view_nick_name"
+            bind:onClickCommand="@{UpdateUserInfoViewModel.onNickNameClickCommand}"
+            bind:rightText="@{AccountCenter.newInstance().nickName}"/>
+
+        <com.sandboxol.blockymods.view.widget.ItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            bind:leftText="@string/item_view_sex"
+            bind:onClickCommand="@{UpdateUserInfoViewModel.onSexClickCommand}"
+            bind:rightText="@{UpdateUserInfoViewModel.sex}"/>
+
+        <com.sandboxol.blockymods.view.widget.ItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            bind:leftText="@string/item_view_birthday"
+            bind:onClickCommand="@{UpdateUserInfoViewModel.onBirthdayClickCommand}"
+            bind:rightText="@{AccountCenter.newInstance().birthday}"
+            bind:rightTextHint="@string/update_info_please_choose"/>
+
+        <com.sandboxol.blockymods.view.widget.ItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            bind:border="false"
+            bind:leftText="@string/item_view_details"
+            bind:onClickCommand="@{UpdateUserInfoViewModel.onDetailClickCommand}"
+            bind:rightText="@{AccountCenter.newInstance().detail}"
+            bind:rightTextHint="@string/more_fragment_no_details"/>
+
+    </LinearLayout>
+
+</layout>

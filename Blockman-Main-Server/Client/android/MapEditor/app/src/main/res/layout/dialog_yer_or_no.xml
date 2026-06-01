@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_dialog_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:lineSpacingExtra="8dp"
+                android:textColor="@color/color_dialog_content_text"
+                android:textSize="@dimen/textSize14Sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boldLineH"
+                android:background="@color/color_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    style="@style/DialogButtonStyle"
+                    android:background="@drawable/btn_dialog_cancel_left"
+                    android:text="@string/cancel"
+                    android:textColor="@color/color_content"/>
+
+                <View
+                    android:layout_width="@dimen/boldLineH"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_line"/>
+
+                <Button
+                    android:id="@+id/btnConfirm"
+                    style="@style/DialogButtonStyle"
+                    android:background="@drawable/btn_dialog_confirm_right"
+                    android:text="@string/confirm"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

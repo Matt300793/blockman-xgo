@@ -1,0 +1,106 @@
+{
+    "Dialog": {
+        "Window": {
+            "Type": "Layout",
+            "Name": "PlayerInfo",
+            "Property": [
+                {
+                    "Name": "DrawColor",
+                    "Value": "1 1 1 0"
+                },
+                {
+                    "Name": "Area",
+                    "Value": "{{0,0},{0,-1},{1,0},{1,-1}}"
+                },
+                {
+                    "Name": "Touchable",
+                    "Value": "false"
+                },
+                {
+                    "Name": "StretchType",
+                    "Value": "NineGrid"
+                },
+                {
+                    "Name": "StretchOffset",
+                    "Value": "3 3 3 3"
+                }
+            ],
+            "Window": [
+                {
+                    "Type": "Layout",
+                    "Name": "PlayerInfo-Health",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,20},{0,20},{1,-20},{0,40}}"
+                        },
+                        {
+                            "Name": "Touchable",
+                            "Value": "false"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Layout",
+                    "Name": "PlayerInfo-FoodSaturation",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,20},{0,20},{1,-20},{0,40}}"
+                        },
+                        {
+                            "Name": "Touchable",
+                            "Value": "false"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Layout",
+                    "Name": "PlayerInfo-Air",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,20},{0,45},{1,-20},{0,65}}"
+                        },
+                        {
+                            "Name": "Touchable",
+                            "Value": "false"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Layout",
+                    "Name": "PlayerInfo-Armor",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,20},{0,45},{1,-20},{0,65}}"
+                        },
+                        {
+                            "Name": "Touchable",
+                            "Value": "false"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Layout",
+                    "Name": "PlayerInfo-Effect-Layout",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,-20},{0,150},{0,30},{1,-150}}"
+                        },
+                        {
+                            "Name": "HorizontalAlignment",
+                            "Value": "Right"
+                        },
+                        {
+                            "Name": "Touchable",
+                            "Value": "false"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

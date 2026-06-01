@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'org.greenrobot.greendao'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+android {
+
+    signingConfigs {
+        blockymods {
+            keyAlias 'blockymods'
+            keyPassword 'blockymods'
+            storeFile file('sandbox.jks')
+            storePassword 'shahe2015'
+            v1SigningEnabled true
+            v2SigningEnabled false
+        }
+    }
+
+    compileSdkVersion android_compile_version
+    buildToolsVersion android_version
+
+    defaultConfig {
+        applicationId "com.sandboxol.mapeditor"
+        minSdkVersion android_min_sdk_version
+        targetSdkVersion android_target_sdk_version
+        versionCode 1
+        versionName "0.0.1"
+        buildConfigField "String", "BASE_URL", "\" http://120.92.145.229\"";
+        buildConfigField "String", "BLOCK_MAN_MINI_GAME_DISPATCH_URL", "\"http://120.92.133.131:9902\"";
+        multiDexEnabled true
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+    buildTypes {
+        debug {
+            zipAlignEnabled true
+            signingConfig signingConfigs.blockymods
+            minifyEnabled false
+            shrinkResources false
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            zipAlignEnabled true
+            signingConfig signingConfigs.blockymods
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            project.ext.versionCodes = ['armeabi-v7a': 3, 'x86': 4]
+            android.applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    output.versionCodeOverride =
+                            project.ext.versionCodes.get(output.getFilter(com.android.build.OutputFile.ABI), 0) * 1000 + android.defaultConfig.versionCode
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        def fileName = "app-mapeditor-v${defaultConfig.versionName}-build-${output.versionCodeOverride}-${variant.productFlavors[0].name}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    productFlavors {
+        google {
+            applicationId "com.sandboxol.mapeditor"
+            resValue "string", "channel_id", "google";
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':common')
+    compile 'org.greenrobot:greendao:3.2.2'
+    compile 'org.greenrobot:greendao-generator:3.2.2'
+}
+
+greendao {
+    schemaVersion 1
+    daoPackage 'com.sandboxol.mapeditor.entity.dao'
+}
+

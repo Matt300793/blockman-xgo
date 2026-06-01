@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="ExportMapViewModel"
+            type="com.sandboxol.mapeditor.view.fragment.exportmap.ExportMapViewModel"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.sandboxol.common.widget.rv.pagerv.PageRecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            bind:model="@{ExportMapViewModel.exportMapListModel}"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FBF1E2">
+
+            <CheckBox
+                style="@style/CircleCheckBoxStyle"
+                android:layout_height="match_parent"
+                android:checked="@{ExportMapViewModel.isAllSelected}"
+                android:clickable="true"
+                android:drawablePadding="@dimen/space10dp"
+                android:paddingLeft="@dimen/space12dp"
+                android:text="@string/map_all_select"
+                android:textColor="#555555"
+                bind:onClickCommand="@{ExportMapViewModel.onAllClickCommand}"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space8dp"
+                android:layout_marginRight="@dimen/space12dp"
+                android:layout_marginTop="@dimen/space8dp"
+                android:background="@drawable/btn_main_confirm"
+                android:enabled="@{ExportMapViewModel.isEnableExport}"
+                android:text="@string/export_map_export_zip"
+                android:textSize="@dimen/textSize15Sp"
+                bind:onClickCommand="@{ExportMapViewModel.onExportCommand}"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</layout>

@@ -1,0 +1,7 @@
+	GunId	Name	Desc	Model	GunIcon	GunType	BulletType	AdapedtBullet	BulletPerShoot	MaxBulletNum	ShootRange	PrepareTime	CdTime	SniperDistance	Damage	KnockBackDistance	SoundType	SwitchMagazineAction	EmptySoundType	BulletOffset	SwitchClipSoundType	PreviewMesh	BulletSpeed	ReloadTime	Recoil	FPVEffect	TPVEffect
+中文备注	枪械道具Id(170+256~184+256)	多语言名称	多语言描述	对应模型	对应Item图标	枪械类型(1手枪/2步枪/3狙击枪/4散弹枪/5冲锋枪)	子弹类型(实体/虚拟)	适配子弹Id(185+256~194+256)	击发子弹数量	最大子弹数量	射程	蓄力时间	射速	狙击距离	伤害	击退力	射击音效	换弹匣动作	空发音效	子弹偏移	换弹匣音效	预览Mesh	子弹速度(每tick几米)	换弹匣时间(多少个tick)	后座力	第一人称特效参数（眼睛偏移#向右偏移#下面偏移#缩放）	第三人称特效参数（眼睛偏移#向右偏移#下面偏移#缩放）
+手枪1	426	gui_gun_name_1	gui_gun_desc_1	gun_01.mesh	gun01	1	1	441	1	50	50	0	0.5	0	1	1	120	pistol_reload	125	12	126	gun.1	12	10	0.2	0.3#0.1#0.15#1.5	0.8#-0.1#0.4#3.5
+ak	427	gui_gun_name_2	gui_gun_desc_2	gun_02.mesh	gun02	2	1	442	1	50	120	0	0.3	0	1.5	2	121	smg_reload	125	7	127	gun.2	15	20	0.2	0.3#0.1#0.15#2	1.8#-0.1#0.4#3.5
+	428	gui_gun_name_3	gui_gun_desc_3	gun_03.mesh	gun05	3	1	442	1	50	100	0	0.15	0	1	1	122	smg_reload	125	8	127	gun.3	15	20	0.2	0.3#0.1#0.15#2	1.8#-0.1#0.4#3.5
+	429	gui_gun_name_4	gui_gun_desc_4	gun_04.mesh	gun04	4	1	444	1	20	50	0	1.5	0	5	1	123	smg_reload	125	25	127	gun.4	15	30	0.2	0.3#0.1#0.15#3	1.8#-0.1#0.4#3.5
+	430	gui_gun_name_6	gui_gun_desc_6	gun_06.mesh	gun03	5	1	446	1	20	200	0	2	8	12	2	124	smg_reload	125	4.5	127	gun.5	15	30	0.2	0.3#0.1#0.15#3	1.8#-0.1#0.4#3.5

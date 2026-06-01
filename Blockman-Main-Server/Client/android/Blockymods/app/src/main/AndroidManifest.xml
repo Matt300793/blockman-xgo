@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.sandboxol.blockymods">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".view.activity.start.StartActivity"
+            android:theme="@style/StartActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".view.activity.main.MainActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme"/>
+
+        <activity
+            android:name="com.sandboxol.common.base.app.TemplateActivity"
+            android:theme="@style/AppTheme"/>
+
+        <activity
+            android:name=".view.dialog.RepeatLoginDialog"
+            android:launchMode="singleTask"
+            android:theme="@style/Transparent"/>
+
+        <activity
+            android:name=".view.activity.account.AccountActivity"
+            android:theme="@style/AppTheme"/>
+
+        <service
+            android:name="com.sandboxol.blocky.service.McProcessChangeDataService"
+            android:enabled="true"
+            android:exported="true"/>
+
+        <!--Facebook-->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+        </activity>
+        <!--Facebook-->
+
+        <!--Talking Dada-->
+        <service
+            android:name="com.apptalkingdata.push.service.PushService"
+            android:exported="true"
+            android:process=":push"/>
+
+        <receiver
+            android:name="com.apptalkingdata.push.service.PushServiceReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.CMD"/>
+                <action android:name="android.talkingdata.action.notification.SHOW"/>
+                <action android:name="android.talkingdata.action.media.MESSAGE"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.tendcloud.tenddata.TalkingDataAppMessageReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.talkingdata.action.media.SILENT"/>
+                <action android:name="android.talkingdata.action.media.TD.TOKEN"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.talkingdata.notification.click"/>
+                <action android:name="com.talkingdata.message.click"/>
+            </intent-filter>
+        </receiver>
+        <!--Talking Dada-->
+
+        <!-- 断网检测 -->
+        <receiver android:name=".receiver.NetworkConnectChangedReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+                <action android:name="android.net.wifi.STATE_CHANGE"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

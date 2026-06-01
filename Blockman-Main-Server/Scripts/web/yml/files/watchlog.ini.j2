@@ -1,0 +1,13 @@
+[program:watchlog]
+command=python /home/ubuntu/watch_log.py {{watch_dir}}
+user=ubuntu
+autostart=true
+autorestart=true
+startsecs=10
+startretries=5
+stdout_logfile=/home/ubuntu/logs/watchlog.log
+stderr_logfile=/home/ubuntu/logs/watchlog-error.log
+stdout_logfile_maxbytes=136870912 
+stdout_logfile_backups=5
+stderr_logfile_maxbytes=136870912
+stderr_logfile_backups=5

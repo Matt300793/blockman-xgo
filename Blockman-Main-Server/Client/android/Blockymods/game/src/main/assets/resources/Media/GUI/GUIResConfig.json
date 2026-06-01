@@ -1,0 +1,33 @@
+{
+  "ResConfig": {
+    "Font": [
+	  {
+        "Type": "FreeType",
+        "Name": "HT28",
+        "Filename": "FZY4JW.ttf",
+        "Size": 14
+	  }
+    ],
+    "Imageset": [
+      { "Filename": "MainControlImageSet.json" },
+	  { "Filename": "items_gui.json" },
+	  { "Filename": "inventory.json" },
+	  { "Filename": "widgets.json" },
+	  { "Filename": "Blocks_gui.json"},
+	  { "Filename": "compass_gui.json"},
+	  { "Filename": "clock_gui.json"},
+	  { "Filename": "creative_inventory.json"},
+	  { "Filename": "mask.json"},
+	  { "Filename": "Pack.json"},
+	  { "Filename": "background.json"},
+	  { "Filename": "icons.json"},
+	  { "Filename": "christmas_ui.json"},
+  	  { "Filename": "ender_ui.json"},
+  	  { "Filename": "normal_ui.json"},
+  	  { "Filename": "trapped_ui.json"},
+	  { "Filename": "gui_material.json"},
+	  { "Filename": "loading_page_bg.json"},
+	  { "Filename": "gui_inventory_icon.json"}
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="ViewModel"
+            type="com.sandboxol.blockymods.view.fragment.dress.DressItemViewModel"/>
+
+        <import type="android.view.View"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/bg_dress_item_border"
+        android:orientation="vertical"
+        bind:onClickCommand="@{ViewModel.onUseDressRecommend}">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/bg_dress_item_text_bg_selector"
+            android:enabled="@{ViewModel.item.expire == -1}"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textSize10Sp"
+            android:visibility="@{ViewModel.item.expire == 0 ? View.GONE : View.VISIBLE}"/>
+
+        <ImageView
+            android:id="@+id/ivPic"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true"
+            bind:uri="@{ViewModel.item.iconUrl}"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/ic_dress_item_selected"
+            android:visibility="@{ViewModel.ids.values().contains(ViewModel.item.getResourceId()) ? View.VISIBLE : View.GONE}"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp"
+            android:src="@drawable/bg_dress_item_selected_border"
+            android:visibility="@{ViewModel.ids.values().contains(ViewModel.item.getResourceId()) ? View.VISIBLE : View.GONE}"/>
+
+    </RelativeLayout>
+</layout>

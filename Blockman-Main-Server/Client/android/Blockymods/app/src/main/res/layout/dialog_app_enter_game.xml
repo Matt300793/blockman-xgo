@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="EnterMiniGameViewModel"
+            type="com.sandboxol.blockymods.view.dialog.EnterMiniGameDialog.EnterMiniGameViewModel"/>
+
+        <import type="android.view.View"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_enter_game_loading"
+            android:gravity="center"
+            android:visibility="@{EnterMiniGameViewModel.isLoading ? View.VISIBLE : View.GONE}">
+
+            <ImageView
+                android:id="@+id/ivLoading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/anim_page_loading"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDialog"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:background="@color/itemDefaultColor"
+            android:gravity="center_horizontal"
+            android:minHeight="188dp"
+            android:orientation="vertical"
+            android:visibility="@{EnterMiniGameViewModel.isLoading ? View.GONE : View.VISIBLE}">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/tip"
+                android:textColor="@color/itemTextHintColor"
+                android:textSize="@dimen/textSize15Sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="@{EnterMiniGameViewModel.timerHint}"
+                android:textColor="@color/itemTextDefaultColor"
+                android:textSize="@dimen/textSize15Sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/borderLineHeight"
+                android:background="@color/borderLineColor"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:layout_weight="1"
+                    android:text="@string/cancel"
+                    android:textColor="@color/itemTextHintColor"
+                    android:textSize="@dimen/textSize18Sp"
+                    android:textStyle="bold"
+                    bind:onClickCommand="@{EnterMiniGameViewModel.onCancelCommand}"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

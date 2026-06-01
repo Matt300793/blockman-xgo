@@ -1,0 +1,95 @@
+<resources>
+
+    <string name="td_app_id">D2D70DC78C2A45BD99D3983FB331F37D</string>
+
+    <string name="app_name">MC Map Editor</string>
+
+    <string name="check_version_hint">*MC地图编辑器制作的地图已兼容所有我的世界版本</string>
+    <string name="check_mc_version_loading">正在检测设备运行环境…</string>
+    <string name="minecraft">MineCraft</string>
+    <string name="wy_minecraft">我的世界</string>
+    <string name="use_instructions">使用说明</string>
+    <string name="no_install_mc">暂未安装我的世界</string>
+    <string name="check_finish_no_install_confirm">流弊！我知道了</string>
+    <string name="check_finish_no_install_content">当前未安装我的世界，但依然可以直接使用MC地图编辑器编辑地图，并支持导入所有我的世界版本使用</string>
+    <string name="map_save">保存</string>
+    <string name="map_copy">复制</string>
+    <string name="map_backup">备份</string>
+    <string name="map_all_select">全选</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="exit">再点一次退出应用</string>
+
+    <string name="main_start_editor">开始编辑</string>
+    <string name="main_my_map">我的地图</string>
+    <string name="main_new_map">新的地图</string>
+    <string name="main_run_editor">启动编辑器</string>
+
+    <string name="new_map_input_name">输入地图名称(不超过30个字符)</string>
+    <string name="new_map_select_land">选择地形</string>
+    <string name="new_map_select_size">地图大小：</string>
+    <string name="new_map_super_flat">超平坦</string>
+    <string name="new_map_sky_land">空岛</string>
+    <string name="new_map_import_local_map">导入本地地图</string>
+    <string name="new_map_infinite">无限</string>
+
+    <string name="my_map_export">导出</string>
+    <string name="my_map_import">导入</string>
+    <string name="my_map_editor">修改</string>
+    <string name="my_map_delete">删除</string>
+    <string name="my_map_backup">备份管理</string>
+    <string name="my_map_no_map">暂无地图</string>
+    <string name="my_map_size">大小：%s</string>
+    <string name="my_map_local_map">本地地图</string>
+    <string name="my_map_start_editor">开始编辑</string>
+    <string name="my_map_export_success">成功导入%1$d张地图，%2$d张失败</string>
+    <string name="my_map_export_failed">导入地图失败，请检查地图格式</string>
+
+    <string name="editor_map_title">修改地图</string>
+    <string name="editor_map_rename">重命名</string>
+    <string name="editor_map_editor_success">修改成功</string>
+    <string name="editor_map_editor_failed">修改失败</string>
+    <string name="editor_map_editor_failed_name">修改失败，名字已存在</string>
+    <string name="editor_map_copy_map">复制地图</string>
+    <string name="editor_map_copy_success">复制成功</string>
+    <string name="editor_map_copy_failed">复制失败</string>
+    <string name="editor_map_model">修改模式</string>
+    <string name="editor_map_rename_hint">不超过30个字符</string>
+
+    <string name="delete_map_title">删除地图</string>
+    <string name="delete_map_delete_success">删除成功</string>
+    <string name="delete_map_delete_hint">确定删除选中地图吗？</string>
+
+    <string name="export_map_title">导出地图</string>
+    <string name="export_map_export_zip">导出地图文件</string>
+    <string name="export_map_export_success">导出成功</string>
+    <string name="export_map_export_failed">导出失败</string>
+
+    <string name="backup_manage_backup_num">共%d个备份</string>
+    <string name="backup_manage_backup_null">暂无备份</string>
+    <string name="backup_manage_backup_lately">最近备份：%s</string>
+
+    <string name="backup_map_title">%s的备份</string>
+    <string name="backup_map_no_backup">暂无备份</string>
+    <string name="backup_map_backup_time">备份时间：%s</string>
+    <string name="backup_map_restore">还原</string>
+    <string name="backup_map_remove_hint">确定要删除%s吗？确认后将永久删除，无法恢复。</string>
+    <string name="backup_map_restore_hint">确定要还原该备份到当前地图吗？</string>
+    <string name="backup_map_restore_failed">还原失败，请重试。</string>
+    <string name="backup_map_restore_success">备份已还原成功，进游戏看看？</string>
+    <string name="backup_map_start_game">启动游戏</string>
+
+    <string name="file_chooser_mc_path">当前位置：我的世界地图文件夹</string>
+    <string name="file_chooser_select_export_path">当前位置：请选择导出位置</string>
+    <string name="file_chooser_select_import_path">当前位置：请选择导入文件</string>
+    <string name="file_chooser_back_last">返回上一级</string>
+    <string name="file_chooser_select_file">选择文件</string>
+    <string name="file_chooser_not_type_file">没有此类文件</string>
+
+    <string name="dialog_check_app_version_content">更新内容</string>
+    <string name="dialog_check_app_version_failed">检测更新失败</string>
+    <string name="dialog_button_update">更新</string>
+    <string name="app_is_latest">Blockymods 已经是最新版本</string>
+    <string name="app_not_latest">Blockymods 有新版本, 要更新吗？</string>
+
+</resources>

@@ -1,0 +1,278 @@
+{
+    "Dialog": {
+        "Window": {
+            "Type": "DefaultWindow",
+            "Name": "LoadingPage",
+            "Property": [
+                {
+                    "Name": "Area",
+                    "Value": "{{0,0},{0,0},{1,0},{1,0}}"
+                },
+                {
+                    "Name": "Touchable",
+                    "Value": "false"
+                }
+            ],
+            "Window": [
+                {
+                    "Type": "SceneMap",
+                    "Name": "LoadingPage-SceneMap",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,0},{0,0},{1,0},{1,0}}"
+                        },
+                        {
+                            "Name": "ClipChild",
+                            "Value": "true"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Layout",
+                    "Name": "LoadingPage-Loading",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,0},{0,-174},{0.5,0},{0.5,-174}}"
+                        },
+                        {
+                            "Name": "VerticalAlignment",
+                            "Value": "Bottom"
+                        },
+                        {
+                            "Name": "HorizontalAlignment",
+                            "Value": "Centre"
+                        }
+                    ],
+                    "Window": [
+                        {
+                            "Type": "StaticText",
+                            "Name": "LoadingPage-TextLaodTipMessage",
+                            "Property": [
+                                {
+                                    "Name": "Area",
+                                    "Value": "{{0,0},{0.5,40},{1,0},{0.5,90}}"
+                                },
+                                {
+                                    "Name": "Text",
+                                    "Value": "正在与服务器同步资源,请稍等..."
+                                },
+                                {
+                                    "Name": "Touchable",
+                                    "Value": "false"
+                                },
+                                {
+                                    "Name": "TextHorzAlignment",
+                                    "Value": "Centre"
+                                },
+                                {
+                                    "Name": "TextVertAlignment",
+                                    "Value": "Centre"
+                                }
+                            ]
+                        },
+                        {
+                            "Type": "ProgressBar",
+                            "Name": "LoadingPage-ProgressBarLoadResource",
+                            "Property": [
+                                {
+                                    "Name": "Material",
+                                    "Value": "CullNone"
+                                },
+                                {
+                                    "Name": "Area",
+                                    "Value": "{{0,0},{0,0},{0,388},{0,28}}"
+                                },
+                                {
+                                    "Name": "VerticalAlignment",
+                                    "Value": "Bottom"
+                                },
+                                {
+                                    "Name": "HorizontalAlignment",
+                                    "Value": "Centre"
+                                },
+                                {
+                                    "Name": "Touchable",
+                                    "Value": "false"
+                                },
+                                {
+                                    "Name": "EnableTextColorRect",
+                                    "Value": "true"
+                                },
+                                {
+                                    "Name": "StretchType",
+                                    "Value": "NineGrid"
+                                },
+                                {
+                                    "Name": "StretchOffset",
+                                    "Value": "10 10 10 10"
+                                },
+                                {
+                                    "Name": "Progress",
+                                    "Value": "0"
+                                },
+                                {
+                                    "Name": "ProgressBackImage",
+                                    "Value": "set:gui_material.json image:huadongkuang"
+                                },
+                                {
+                                    "Name": "ProgressImage",
+                                    "Value": "set:gui_material.json image:huadongtiao"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Type": "StaticImage",
+                    "Name": "LoadingPage-Loading-Failure",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,0},{0,-196},{0,366},{0,40}}"
+                        },
+                        {
+                            "Name": "VerticalAlignment",
+                            "Value": "Bottom"
+                        },
+                        {
+                            "Name": "HorizontalAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "Visible",
+                            "Value": "false"
+                        },
+                        {
+                            "Name": "StretchType",
+                            "Value": "NineGrid"
+                        },
+                        {
+                            "Name": "StretchOffset",
+                            "Value": "30 30 30 30"
+                        },
+                        {
+                            "Name": "ImageName",
+                            "Value": "set:gui_material.json image:gui_bg"
+                        },
+                        {
+                            "Name": "HexgonTopImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonTopColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonSideImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonSideColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonOverlayerImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonOverlayerColor",
+                            "Value": "1 1 1 1"
+                        }
+                    ],
+                    "Window": [
+                        {
+                            "Type": "StaticText",
+                            "Name": "LoadingPage-Msg-Failure",
+                            "Property": [
+                                {
+                                    "Name": "Area",
+                                    "Value": "{{0,0},{0,50},{1,0},{0,100}}"
+                                },
+                                {
+                                    "Name": "Text",
+                                    "Value": "加入游戏失败"
+                                },
+                                {
+                                    "Name": "TextHorzAlignment",
+                                    "Value": "Centre"
+                                },
+                                {
+                                    "Name": "TextVertAlignment",
+                                    "Value": "Centre"
+                                }
+                            ]
+                        },
+                        {
+                            "Type": "Button",
+                            "Name": "LoadingPage-Button-close",
+                            "Property": [
+                                {
+                                    "Name": "Area",
+                                    "Value": "{{0,0},{0,-30},{0,180},{0,52}}"
+                                },
+                                {
+                                    "Name": "VerticalAlignment",
+                                    "Value": "Bottom"
+                                },
+                                {
+                                    "Name": "HorizontalAlignment",
+                                    "Value": "Centre"
+                                },
+                                {
+                                    "Name": "Text",
+                                    "Value": "Close"
+                                },
+                                {
+                                    "Name": "StretchType",
+                                    "Value": "NineGrid"
+                                },
+                                {
+                                    "Name": "StretchOffset",
+                                    "Value": "30 30 30 30"
+                                },
+                                {
+                                    "Name": "NormalImage",
+                                    "Value": "set:gui_material.json image:btn_bg_blue"
+                                },
+                                {
+                                    "Name": "PushedImage",
+                                    "Value": "set:gui_material.json image:btn_bg_blue"
+                                },
+                                {
+                                    "Name": "SoundName",
+                                    "Value": ""
+                                },
+                                {
+                                    "Name": "HexgonTopImage",
+                                    "Value": ""
+                                },
+                                {
+                                    "Name": "HexgonTopColor",
+                                    "Value": "1 1 1 1"
+                                },
+                                {
+                                    "Name": "HexgonSideImage",
+                                    "Value": ""
+                                },
+                                {
+                                    "Name": "HexgonSideColor",
+                                    "Value": "1 1 1 1"
+                                },
+                                {
+                                    "Name": "HexgonOverlayerImage",
+                                    "Value": ""
+                                },
+                                {
+                                    "Name": "HexgonOverlayerColor",
+                                    "Value": "1 1 1 1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

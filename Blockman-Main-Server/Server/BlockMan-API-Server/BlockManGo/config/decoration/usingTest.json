@@ -1,0 +1,22 @@
+[
+    {
+      "id": 4,
+      "typeId": 8,
+      "camera": "top",
+      "name": "Mechanic Top",
+      "iconUrl": "http://staticgs.sandboxol.com/sandbox/dresses/iconsclothes_tops.2.clothes_tops.1513395613995.2",
+      "status": 0,
+      "sex": 0,
+      "tag": [],
+      "resourceId": "clothes_tops.2",
+      "details": "Mechanic Top",
+      "expire": 0,
+      "type": 0,
+      "clanLevel": 0,
+      "vip": 0,
+      "occupyPosition": [
+        12
+      ],
+      "isFree": 1
+    }
+]

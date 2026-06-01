@@ -1,0 +1,15 @@
+---
+- name: deploy 
+  hosts: eureka-service
+  tasks:
+  - name: Add mappings to /etc/hosts
+    blockinfile:
+      path: /etc/hosts
+      block: 
+         "{{ item.peersip }} {{ item.name }}"
+      marker: "# {mark} ANSIBLE MANAGED BLOCK {{ item.profile_name }}"
+    with_items:
+      - "{{ hostvars[groups['eureka-service'][0]] }}"
+      - "{{ hostvars[groups['eureka-service'][1]] }}"
+    become: True
+    ignore_errors: yes

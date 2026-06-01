@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="LoginViewModel"
+            type="com.sandboxol.blockymods.view.fragment.login.LoginViewModel"/>
+
+        <import type="android.view.View"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:src="@mipmap/ic_default"/>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/account_title"
+                android:textColor="@color/titleText"
+                android:textSize="@dimen/textSize15Sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                style="@style/AccountEditTextStyle"
+                android:hint="@string/account_name"
+                android:text="@{LoginViewModel.accountDefault}"
+                bind:afterTextChangedCommand="@{LoginViewModel.onAccountCommand}"/>
+
+            <EditText
+                style="@style/PasswordEditTextStyle"
+                android:hint="@string/account_password"
+                android:imeOptions="actionDone"
+                android:text="@{LoginViewModel.passwordDefault}"
+                bind:afterTextChangedCommand="@{LoginViewModel.onPasswordCommand}"/>
+
+            <Button
+                style="@style/GreenButtonStyle"
+                android:text="@string/account_login"
+                bind:onClickCommand="@{LoginViewModel.onLoginCommand}"/>
+
+            <RelativeLayout
+                android:layout_width="264dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:text="@string/account_forget_password"
+                    android:textColor="@color/titleText"
+                    android:textSize="13sp"
+                    bind:onClickCommand="@{LoginViewModel.onForgetCommand}"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="12dp"
+                    android:text="@string/account_create_account"
+                    android:textColor="@color/createAccountColor"
+                    android:textSize="13sp"
+                    bind:onClickCommand="@{LoginViewModel.onRegisterCommand}"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="@{LoginViewModel.isShowThirdPart ? View.VISIBLE : View.GONE}">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom|center"
+                android:text="@string/account_third_party_login"
+                android:textColor="@color/titleText"
+                android:textSize="@dimen/textSize14Sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    style="@style/AccountThirdPartyTextStyle"
+                    android:drawableTop="@mipmap/ic_google_play_nor"
+                    android:text="GooglePlay"/>
+
+                <TextView
+                    style="@style/AccountThirdPartyTextStyle"
+                    android:drawableTop="@mipmap/ic_google_nor"
+                    android:text="Google+"/>
+
+                <TextView
+                    style="@style/AccountThirdPartyTextStyle"
+                    android:drawableTop="@mipmap/ic_facebook_nor"
+                    android:text="Facebook"
+                    bind:onClickCommand="@{LoginViewModel.onFBLoginCommand}"/>
+
+                <TextView
+                    style="@style/AccountThirdPartyTextStyle"
+                    android:drawableTop="@mipmap/ic_twitter_nor"
+                    android:text="Twitter"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</layout>

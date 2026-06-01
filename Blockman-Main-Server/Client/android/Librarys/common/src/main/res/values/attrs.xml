@@ -1,0 +1,147 @@
+<resources>
+
+    <attr name="requestFocus" format="boolean"/>
+    <attr name="itemView" format="reference"/>
+    <attr name="items" format="reference"/>
+    <attr name="limit" format="integer"/>
+    <attr name="adapter" format="reference"/>
+    <attr name="onScrollChangeCommand" format="reference"/>
+    <attr name="onScrollStateChangedCommand" format="reference"/>
+    <attr name="uri" format="string"/>
+    <attr name="onTouchCommand" format="reference"/>
+    <attr name="onClickCommand" format="reference"/>
+    <attr name="onCheckCommand" format="reference"/>
+    <attr name="checkId" format="integer"/>
+    <attr name="onFocusChangeCommand" format="reference"/>
+    <attr name="model" format="reference"/>
+    <attr name="layoutFactory" format="reference"/>
+    <attr name="listLayout" format="reference"/>
+    <attr name="errorText" format="string"/>
+    <attr name="isLoading" format="boolean"/>
+    <attr name="isSuccess" format="boolean"/>
+    <attr name="isVisible" format="boolean"/>
+    <attr name="onTabChangeCommand" format="reference"/>
+    <attr name="selectTab" format="reference"/>
+    <attr name="position" format="integer"/>
+    <attr name="anim" format="boolean"/>
+    <attr name="child" format="reference"/>
+    <attr name="onShowAnimate" format="integer"/>
+
+    <declare-styleable name="View">
+        <attr name="onClickCommand"/>
+        <attr name="onFocusChangeCommand"/>
+        <attr name="onTouchCommand"/>
+        <attr name="onShowAnimate"/>
+    </declare-styleable>
+
+    <declare-styleable name="AdapterView">
+        <attr name="itemView"/>
+        <attr name="items"/>
+        <attr name="adapter"/>
+        <attr name="dropDownItemView" format="reference"/>
+        <attr name="itemIds" format="reference"/>
+        <attr name="itemIsEnabled" format="reference"/>
+        <attr name="onScrollStateChangedCommand"/>
+        <attr name="onScrollChangeCommand"/>
+        <attr name="onLoadMoreCommand" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="TextView">
+        <attr name="onClickCommand"/>
+        <attr name="requestFocus"/>
+        <attr name="beforeTextChangedCommand" format="reference"/>
+        <attr name="onTextChangedCommand" format="reference"/>
+        <attr name="afterTextChangedCommand" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ImageView">
+        <attr name="onClickCommand"/>
+        <attr name="uri"/>
+        <attr name="placeImageRes" format="reference|color"/>
+        <attr name="failedImageRes" format="reference|color"/>
+        <attr name="onSuccessCommand" format="reference"/>
+        <attr name="imageSrc" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ViewGroup">
+        <attr name="onClickCommand"/>
+        <attr name="itemView"/>
+        <attr name="child"/>
+        <attr name="viewModels" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="RecyclerView" parent="AdapterView">
+        <attr name="onLoadMoreCommand"/>
+    </declare-styleable>
+
+    <declare-styleable name="RadioGroup">
+        <attr name="onCheckCommand" />
+    </declare-styleable>
+
+    <declare-styleable name="CheckBox">
+        <attr name="onCheckCommand"/>
+    </declare-styleable>
+
+    <declare-styleable name="DressRadioGroup">
+        <attr name="onTabChangeCommand" />
+        <attr name="selectTab" />
+    </declare-styleable>
+
+    <declare-styleable name="ListView" parent="AdapterView">
+        <attr name="onItemClickCommand" format="reference"/>
+        <attr name="onLoadMoreCommand"/>
+    </declare-styleable>
+
+    <declare-styleable name="ViewPager">
+        <attr name="itemView"/>
+        <attr name="items"/>
+        <attr name="limit"/>
+        <attr name="adapter"/>
+        <attr name="position"/>
+        <attr name="anim"/>
+        <attr name="pageTitles" format="reference"/>
+        <attr name="onPageScrolledCommand" format="reference"/>
+        <attr name="onPageSelectedCommand" format="reference"/>
+        <attr name="onPageScrollStateChangedCommand" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="NestedScrollView">
+        <attr name="onScrollChangeCommand"/>
+    </declare-styleable>
+
+    <declare-styleable name="ScrollView">
+        <attr name="onScrollChangeCommand"/>
+    </declare-styleable>
+
+    <declare-styleable name="SwipeRefreshLayout">
+        <attr name="onRefreshCommand" format="reference"/>
+        <attr name="setRefreshing" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="WebView">
+        <attr name="render" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="DataRecyclerView">
+        <attr name="model"/>
+        <attr name="layoutFactory"/>
+        <attr name="listLayout"/>
+    </declare-styleable>
+
+    <declare-styleable name="PageRecyclerView">
+        <attr name="model"/>
+        <attr name="layoutFactory"/>
+        <attr name="listLayout"/>
+        <attr name="page" format="integer"/>
+        <attr name="size" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="PageLoadingView">
+        <attr name="background_color" format="color" />
+        <attr name="errorText"/>
+        <attr name="isLoading"/>
+        <attr name="isSuccess"/>
+        <attr name="isVisible"/>
+    </declare-styleable>
+
+</resources>

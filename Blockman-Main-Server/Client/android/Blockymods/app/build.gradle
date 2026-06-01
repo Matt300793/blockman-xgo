@@ -1,0 +1,184 @@
+import java.util.regex.Matcher
+import java.util.regex.Pattern
+
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'org.greenrobot.greendao'
+
+String taskName = getCurrentFlavor();
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    flatDir {
+        dirs '../libs'
+    }
+}
+
+android {
+
+    signingConfigs {
+        blockymods {
+            keyAlias 'blockymods'
+            keyPassword 'blockymods'
+            storeFile file('sandbox.jks')
+            storePassword 'shahe2015'
+            v1SigningEnabled true
+            v2SigningEnabled false
+        }
+    }
+
+    compileSdkVersion android_compile_version
+    buildToolsVersion android_version
+
+    defaultConfig {
+        applicationId "com.sandboxol.blockymods"
+        minSdkVersion android_min_sdk_version
+        targetSdkVersion android_target_sdk_version
+        versionCode 27
+        versionName "1.0.4"
+        buildConfigField "String", "BASE_URL", "\"http://mods.sandboxol.com\"";
+        buildConfigField "String", "BLOCK_MAN_MINI_GAME_DISPATCH_URL", "\"http://dsp.bmg.sandboxol.com:9902\"";
+        multiDexEnabled true
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+    buildTypes {
+        debug {
+            zipAlignEnabled true
+            signingConfig signingConfigs.blockymods
+            minifyEnabled false
+            shrinkResources false
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            zipAlignEnabled true
+            signingConfig signingConfigs.blockymods
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            project.ext.versionCodes = ['armeabi-v7a': 3, 'x86': 4]
+            android.applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    output.versionCodeOverride =
+                            project.ext.versionCodes.get(output.getFilter(com.android.build.OutputFile.ABI), 0) * 1000 + android.defaultConfig.versionCode
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        def fileName = "app-blockymods-v${defaultConfig.versionName}-build-${output.versionCodeOverride}-${variant.productFlavors[0].name}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+    }
+
+    sourceSets {
+
+        google {
+
+        }
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            if (taskName != null && taskName.contains("86")) {
+                println("taskNameX86  " + taskName)
+                include 'x86'
+            } else {
+                println("taskNameArm  " + taskName)
+                include 'armeabi-v7a'
+            }
+            universalApk false
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    productFlavors {
+
+        envtest {
+            applicationId "com.sandboxol.blockymods"
+            buildConfigField "String", "BASE_URL", "\"http://120.92.158.119\"";
+            buildConfigField "String", "BLOCK_MAN_MINI_GAME_DISPATCH_URL", "\"http://120.92.133.131:9902\"";
+            resValue "string", "channel_id", "envtest";
+        }
+
+        envtestX86 {
+            applicationId "com.sandboxol.blockymods"
+            buildConfigField "String", "BASE_URL", "\"http://120.92.158.119\"";
+            buildConfigField "String", "BLOCK_MAN_MINI_GAME_DISPATCH_URL", "\"http://120.92.133.131:9902\"";
+            resValue "string", "channel_id", "envtest";
+        }
+
+        google {
+            applicationId "com.sandboxol.blockymods"
+            buildConfigField "String", "BASE_URL", "\"http://mods.sandboxol.com\"";
+            buildConfigField "String", "BLOCK_MAN_MINI_GAME_DISPATCH_URL", "\"http://dsp.bmg.sandboxol.com:9902\"";
+            resValue "string", "channel_id", "google";
+        }
+
+        googleX86 {
+            applicationId "com.sandboxol.blockymods"
+            buildConfigField "String", "BASE_URL", "\"http://mods.sandboxol.com\"";
+            buildConfigField "String", "BLOCK_MAN_MINI_GAME_DISPATCH_URL", "\"http://dsp.bmg.sandboxol.com:9902\"";
+            resValue "string", "channel_id", "google";
+        }
+    }
+
+}
+
+def String getCurrentFlavor() {
+    Gradle gradle = getGradle()
+    String tskReqStr = gradle.getStartParameter().getTaskRequests().toString()
+    Pattern pattern;
+    if (tskReqStr.contains("assemble"))
+        pattern = Pattern.compile("assemble(\\w+)(Release|Debug)")
+    else
+        pattern = Pattern.compile("app:generate(\\w+)(Release|Debug)")
+
+    Matcher matcher = pattern.matcher(tskReqStr)
+
+    if (matcher.find()) {
+        return matcher.group(1).toLowerCase()
+    } else {
+        return null;
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':common')
+    compile project(':game')
+    compile 'org.greenrobot:greendao:3.2.2'
+    compile 'org.greenrobot:greendao-generator:3.2.2'
+    compile('cn.qqtheme.framework:WheelPicker:1.5.5') {
+        exclude group: 'com.android.support'
+    }
+    compile 'com.facebook.android:facebook-login:4.27.0'
+    compile files('libs/TalkingData_Analytics_Android_SDK_GP_V2.2.37.jar')
+}
+
+greendao {
+    schemaVersion 2
+    daoPackage 'com.sandboxol.blockymods.entity.dao'
+}
+

@@ -1,0 +1,11 @@
+{
+    "dispHost": "192.168.1.35",
+    "dispPort": 9910,
+
+    "cdnUrl": "https://static.moonsveil.xyz/",
+    "dispUrl": "https://static.moonsveil.xyz/",
+    "innerUrl": "https://static.moonsveil.xyz/",
+    "dataUrl": "https://static.moonsveil.xyz/",
+    "mapUrl": "https://static.moonsveil.xyz/",
+    "coverUrl": "http://localhost:3000/static"
+}

@@ -1,0 +1,2 @@
+gui_rank_button=Rank
+default.rank.name=Rank

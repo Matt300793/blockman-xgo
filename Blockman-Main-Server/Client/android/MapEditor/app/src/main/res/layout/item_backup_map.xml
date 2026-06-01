@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="ViewModel"
+            type="com.sandboxol.mapeditor.view.fragment.backupmap.BackupMapItemViewModel"/>
+
+        <import type="com.sandboxol.mapeditor.R"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sandboxol.mapeditor.view.widget.LineItemView
+            style="@style/MapListItemStyle"
+            android:layout_height="91dp">
+
+            <LinearLayout
+                style="@style/MapListItemContentStyle"
+                android:layout_height="90dp">
+
+                <com.sandboxol.mapeditor.view.widget.RoundImageView
+                    style="@style/SmallMcMapIconStyle"
+                    android:scaleType="fitXY"
+                    bind:borderRadius="@dimen/space6dp"
+                    bind:failedImageRes="@{R.mipmap.ic_map_default}"
+                    bind:placeImageRes="@{R.mipmap.ic_map_default}"
+                    bind:type="round"
+                    bind:uri="@{ViewModel.image}"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="@{ViewModel.name}"
+                        android:textColor="@color/color_dialog_content_text"
+                        android:textSize="@dimen/textSize15Sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space8dp"
+                        android:text="@{ViewModel.time}"
+                        android:textColor="@color/color_hint_text"
+                        android:textSize="@dimen/textSize11Sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.sandboxol.mapeditor.view.widget.LineItemView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@color/color_more_bg"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/ListItemButtonStyle"
+                android:background="?attr/selectableItemBackground"
+                android:text="@string/my_map_delete"
+                android:textColor="@color/color_content"
+                bind:onClickCommand="@{ViewModel.onRemoveCommand}"/>
+
+            <View
+                android:layout_width="@dimen/boldLineH"
+                android:layout_height="match_parent"
+                android:background="@color/color_line"/>
+
+            <Button
+                style="@style/ListItemButtonStyle"
+                android:background="?attr/selectableItemBackground"
+                android:text="@string/backup_map_restore"
+                bind:onClickCommand="@{ViewModel.onRestoreCommand}"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

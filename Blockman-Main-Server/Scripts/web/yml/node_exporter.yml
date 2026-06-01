@@ -1,0 +1,49 @@
+- name: deploy prometheus node
+  hosts: "{{ service }}"
+  remote_user: ubuntu
+  become: true
+  vars:
+    exporter_binary: 'prometheus_node_exporter'
+    exporter_binary_dest: '/usr/bin/prometheus_node_exporter'
+    exporter_service: 'prometheus-node-exporter.service'
+    exporter_service_dest: '/etc/systemd/system/prometheus-node-exporter.service'
+    watch_dir: /home/deploy/logs/supervisor
+
+  tasks:
+  - name: copy the binary to {{ exporter_binary_dest }}
+    copy:
+      src: "./files/{{ exporter_binary }}"
+      dest: "{{ exporter_binary_dest }}"
+      mode: 0755
+
+  - name: copy the upstart conf to {{ exporter_service_dest }}
+    copy:
+      src: "./files/{{ exporter_service }}"
+      dest: "{{ exporter_service_dest }}"
+
+  - name: start exporter sysv service
+    systemd:
+      name: "{{ exporter_service }}"
+      enabled: yes
+      state: restarted
+      daemon_reload: yes
+
+  - template: src=./metrics.sh dest=./metrics.sh mode=700
+
+  - name: Creates an entry like "/home/ubuntu/metrics.sh"
+    cron:
+      name: "java cpu and memory usage metrics"
+      job: "/home/ubuntu/metrics.sh"
+
+  - file: path=./logs state=directory mode=755
+  - template: src=./files/watch_log.py dest=./watch_log.py
+  - template: src=./files/watchlog.ini.j2 dest=/etc/supervisor/conf.d/watchlog.ini
+
+  - name: install python module - requests
+    pip:
+      name: requests
+
+  - name: start watchlog
+    supervisorctl: |
+      name="watchlog"
+      state=present

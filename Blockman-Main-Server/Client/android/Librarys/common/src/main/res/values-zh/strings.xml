@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">common</string>
+    <string name="loading">Loading…</string>
+    <string name="no_data">No data</string>
+
+    <string name="connect_server_time_out">连接服务器超时，请重试</string>
+    <string name="connect_server_no_connect">无网络连接，请检测网络</string>
+    <string name="connect_server_un_know">请求过程出错，请检查代码</string>
+    <string name="connect_error_code">未知错误code:%d，请联系管理员</string>
+    <!--2017-11-29 11:45:33-->
+    <string name="connect_repeat_login">账户验证失效,请重新登录</string>
+</resources>

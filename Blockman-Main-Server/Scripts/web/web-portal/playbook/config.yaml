@@ -1,0 +1,113 @@
+defaultInstanceType: c5.xlarge
+defaultServiceCount: 2
+defaultServiceCpu: 0.3
+defaultServiceMemory: 0.75
+targetGroupEnalbed: True
+
+serviceTypes:
+  - type: service
+    instanceType: c5.xlarge
+    cpu: 0.1
+    memory: 0.2
+    count: 1
+    remix: True
+  - type: center
+    instanceType: c5.xlarge
+    cpu: 0.5
+    memory: 0.2
+    count: 1
+  - type: gateway
+    instanceType: c5.xlarge
+    cpu: 0.5
+    memory: 0.2
+    count: 1 
+  - type: eureka
+    instanceType: c5.xlarge
+    cpu:  0.5
+    memory: 0.5
+    count: 1
+
+services:
+  - name: message-process
+    cpu: 0.6
+    memory: 1.2
+    count: 1
+  - name: singleton-service
+    cpu: 0.6
+    memory: 1.2
+    count: 1
+  - name: web-service
+    cpu: 0.6
+    memory: 0.5
+    count: 1
+
+serviceNames:
+  - auth-center
+  - clan-center
+  - decoration-center
+  - friend-center
+  - game-center
+  - mailbox-center
+  - msg-center
+  - pay-center
+  - user-center
+  - message-process
+  - activity-service
+  - charmingtown-service
+  - clan-service
+  - decoration-service
+  - eureka-service
+  - friend-service
+  - gamedata-service
+  - game-service
+  - gateway-service
+  - mailbox-service
+  - msg-service
+  - pay-service
+  - shop-service
+  - singleton-service
+  - user-service
+  - web-service
+  - gameaide-service
+
+# base.09 image id
+imageId: ami-00cbdc2a9826dc0ed
+securityGroups: ['sg-075c44496f8285951','sg-051746dc2f10162b8']
+vpcId: vpc-08f7ec545f1ecf3e7
+subnetId: subnet-0f97c42f2e9647fe3
+#securityGroups: ['default', 'bmg.webservice']
+tags:
+  namespace: dev-jenkins-deploy-web
+  lang: java
+
+targetGroups:
+  - service: decoration-center
+    arn: arn:aws-cn:elasticloadbalancing:cn-northwest-1:733520899135:targetgroup/decoration-center-dev/7d7cc19bc2281e56
+  - service: game-center
+    arn: arn:aws-cn:elasticloadbalancing:cn-northwest-1:733520899135:targetgroup/game-center-dev/37668a5d604e28f3
+  - service: gamedata-service
+    arn: arn:aws-cn:elasticloadbalancing:cn-northwest-1:733520899135:targetgroup/gamedata-instances-dev/9baf4720d3134984
+  - service: gateway-service
+    arn: arn:aws-cn:elasticloadbalancing:cn-northwest-1:733520899135:targetgroup/gateway-isntances-dev/5acb0f2d18e4fd1a
+
+# 预留cpu给操作系统使用
+reservedCpu: 0.3
+# 预留内存给操作系统使用
+reservedMemory: 0.5
+instanceTypeDetails:
+  - name: c5.xlarge
+    cpu: 4
+    memory: 8
+  - name: m4.large
+    cpu: 2
+    memory: 8
+  - name: t2.small
+    cpu: 1
+    memory: 2
+
+profiles:
+  us-east-1: oversea
+  cn-northwest-1: ningxia-dev
+
+repo_dir: /mnt/d/reps/pickaxe
+build_dir: /home/console/webservice-dev/web-portal/build

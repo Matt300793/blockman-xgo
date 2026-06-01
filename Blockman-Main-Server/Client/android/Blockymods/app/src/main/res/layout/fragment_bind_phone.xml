@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="BindPhoneViewModel"
+            type="com.sandboxol.blockymods.view.fragment.bindphone.BindPhoneViewModel"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/defaultMargin"
+            android:layout_marginRight="@dimen/defaultMargin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemDefaultHeight"
+                android:background="@color/itemDefaultColor"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="123dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/bind_phone_place_hint"
+                    android:textColor="@color/itemTextDefaultColor"
+                    android:textSize="@dimen/textSize14Sp"/>
+
+                <View
+                    android:layout_width="@dimen/borderLineHeight"
+                    android:layout_height="match_parent"
+                    android:background="@color/borderLineColor"/>
+
+                <EditText
+                    style="@style/ClearEditTextStyle"
+                    android:hint="@string/bind_phone_phone_hint"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    app:afterTextChangedCommand="@{BindPhoneViewModel.onGetPhoneNumCommand}"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itemDefaultHeight"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    style="@style/ClearEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/itemDefaultColor"
+                    android:hint="@string/bind_phone_code_hint"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    app:afterTextChangedCommand="@{BindPhoneViewModel.onGetVerifyCodeCommand}"
+                    app:requestFocus="@{BindPhoneViewModel.editTextFocus}"/>
+
+                <Button
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btn_green_selector"
+                    android:text="@string/bind_phone_get_code_hint"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textSize16Sp"
+                    app:onClickCommand="@{BindPhoneViewModel.onGetCodeCommand}"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            style="@style/GreenButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="@dimen/defaultMargin"
+            android:layout_marginRight="@dimen/defaultMargin"
+            android:layout_marginTop="20dp"
+            android:text="@string/sure"
+            app:onClickCommand="@{BindPhoneViewModel.onVerificationCommand}"/>
+
+    </LinearLayout>
+
+</layout>

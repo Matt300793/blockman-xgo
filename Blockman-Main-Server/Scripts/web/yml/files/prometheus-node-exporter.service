@@ -1,0 +1,9 @@
+[Unit]
+Description=Prometheus Exporter for machine metrics.
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/prometheus_node_exporter --collector.supervisord --collector.supervisord.url="http://localhost:9001/RPC2" --collector.textfile --collector.textfile.directory="/home/ubuntu/textfile"
+
+[Install]
+WantedBy=multi-user.target

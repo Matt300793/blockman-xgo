@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="lineH">0.5dp</dimen>
+    <dimen name="boldLineH">1dp</dimen>
+
+    <dimen name="textSize8Sp">8sp</dimen>
+    <dimen name="textSize9Sp">9sp</dimen>
+    <dimen name="textSize10Sp">10sp</dimen>
+    <dimen name="textSize11Sp">11sp</dimen>
+    <dimen name="textSize12Sp">12sp</dimen>
+    <dimen name="textSize14Sp">14sp</dimen>
+    <dimen name="textSize15Sp">15sp</dimen>
+    <dimen name="textSize16Sp">16sp</dimen>
+    <dimen name="textSize17Sp">17sp</dimen>
+    <dimen name="textSize18Sp">18sp</dimen>
+    <dimen name="textSize24Sp">24sp</dimen>
+
+    <dimen name="normal_radius">6dp</dimen>
+
+    <dimen name="space4dp">4dp</dimen>
+    <dimen name="space4_5dp">4.5dp</dimen>
+    <dimen name="space6dp">6dp</dimen>
+    <dimen name="space8dp">8dp</dimen>
+    <dimen name="space9dp">9dp</dimen>
+    <dimen name="space10dp">10dp</dimen>
+    <dimen name="space12dp">12dp</dimen>
+    <dimen name="space15dp">15dp</dimen>
+    <dimen name="space18dp">18dp</dimen>
+    <dimen name="space20dp">20dp</dimen>
+    <dimen name="space24dp">24dp</dimen>
+
+    <dimen name="more_width">170dp</dimen>
+    <dimen name="map_icon_size">80dp</dimen>
+    <dimen name="small_map_icon_size">70dp</dimen>
+
+</resources>

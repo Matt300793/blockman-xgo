@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="ChatViewModel"
+            type="com.sandboxol.blockymods.view.fragment.chat.ChatViewModel"/>
+    </data>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/toolBarHeight"
+        android:background="@color/mainBgColor"
+        android:gravity="center"
+        android:text="CHAT"
+        android:textSize="50sp"/>
+
+</layout>

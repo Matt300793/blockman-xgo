@@ -1,0 +1,10 @@
+- name: deploy {{ service }}
+  hosts: "{{ service }}"
+  remote_user: deploy
+  vars:
+    work_dir: "{{ playdir }}"
+  tasks:
+  - name: stop service
+    supervisorctl: |
+      name="{{service}}"
+      state=stopped

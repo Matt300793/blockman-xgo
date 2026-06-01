@@ -1,0 +1,608 @@
+/* Localizable.strings
+  BlockyModes
+
+  Created by KiBen on 2018/1/18.
+  Copyright © 2018年 SandboxOL. All rights reserved. */
+
+/* 关于Blocky Mods */
+"about_me" = "关于Blocky Mods";
+
+/* 账号: */
+"account" = "账号";
+
+/* 账号与安全 */
+"account_and_security" = "账号与安全";
+
+/* 账号格式不正确 */
+"account_format_not_valid" = "账号格式不正确";
+
+/* 账号 */
+"account_name" = "账号";
+
+/* 密码 */
+"account_password" = "密码";
+
+/* 点赞数 */
+"appreciate" = "点赞数";
+
+/* 绑定成功 */
+"bind_success" = "绑定成功";
+
+/* 生日 */
+"birthday" = "生日";
+
+/* 分类 */
+"category" = "分类";
+
+/* 冒险 */
+"category_adventure" = "AVG";
+
+/* 全部 */
+"category_all" = "All";
+
+/* 枪战 */
+"category_gun" = "STG";
+
+/* 经营 */
+"category_manage" = "SIM";
+
+/* PVP */
+"category_pvp" = "PVP";
+
+/* 换一批 */
+"change_another" = "换一批";
+
+/* 检查更新 */
+"check_update" = "检查更新";
+
+/* 关闭 */
+"close" = "关闭";
+
+/* 失败 */
+"common_fail" = "失败";
+
+/* 取消 */
+"common_cancel" = "取消";
+
+/* 相册 */
+"common_photo_library" = "相册";
+
+/* 相机 */
+"common_camera" = "相机";
+
+/* 请求失败，请重试 */
+"common_request_fail_retry" = "请求失败，请重试";
+
+/* 成功 */
+"common_success" = "成功";
+
+/* 确认密码 */
+"confirm_password" = "确认密码";
+
+/* 确认付款 */
+"confirm_payment" = "确认付款";
+
+/* 创建账号 */
+"create_Account" = "创建账号";
+
+/* 创建账号 */
+"create_account" = "创建账号";
+
+/* 服装账单 */
+"decoration_bill" = "账单";
+
+/* decoration_has_purchased */
+"decoration_has_purchased" = "装饰已购买";
+
+/* 购买失败 */
+"decoration_pay_failed" = "购买失败";
+
+/* 购买成功 */
+"decoration_pay_successful" = "购买成功";
+
+/* decoration_remain_quantity */
+"decoration_remain_quantity" = "剩余";
+
+/* 合计: */
+"decoration_shopcart_total" = "合计: ";
+
+/* 魔方不足 */
+"diamonds_not_enough" = "魔方不足";
+
+/* 完成 */
+"done" = "完成";
+
+/* 重复新密码 */
+"double_input_new_password" = "重复新密码";
+
+/* 邮件格式不正确 */
+"email_format_not_valid" = "邮件格式不正确";
+
+/* 进入游戏 */
+"enter_game" = "进入游戏";
+
+/* 进入游戏失败，请重试 */
+"enter_game_fail_retry" = "进入游戏失败，请重试";
+
+/* 问题反馈 */
+"feedback" = "问题反馈";
+
+/* 女 */
+"female" = "女";
+
+/* 忘记密码 */
+"forget_password" = "忘记密码";
+
+/* 朋友在玩 */
+"friends_playing" = "朋友在玩";
+
+/* 游戏介绍: */
+"game_introduce" = "游戏介绍:";
+
+/* 性别
+ 性别: */
+"gender" = "性别";
+
+/* 性别暂不支持修改 */
+"gender_can_not_modify" = "性别暂不支持修改";
+
+/* 金币不足 */
+"golds_not_enough" = "金币不足";
+
+/* 已有账号 */
+"has_already_account" = "已有账号";
+
+/* 帮助 */
+"help" = "帮助";
+
+/* 输入邮箱 */
+"input_email" = "输入邮箱";
+
+/* 输入新密码 */
+"input_new_password" = "输入新密码";
+
+/* 输入昵称 */
+"input_nickname" = "输入昵称";
+
+/* 输入原密码 */
+"input_origin_password" = "输入原密码";
+
+/* 输入验证码 */
+"input_verification_code" = "输入验证码";
+
+/* 介绍一下你自己吧... */
+"introduce_yourself" = "介绍一下你自己吧...";
+
+/* 个人简介
+ 简介: */
+"introduction" = "简介: ";
+
+/* 是否放弃注册? */
+"is_cancel_register" = "是否放弃注册?";
+
+/* 是否退出当前账号? */
+"is_sure_log_out" = "是否退出当前账号?";
+
+/* 是否解绑邮箱 */
+"is_unbind_email" = "是否解绑邮箱";
+
+/* 登录 */
+"log_in" = "登录";
+
+/* 退出登录 */
+"log_out" = "退出登录";
+
+/* 邮箱 */
+"mail" = "邮箱";
+
+/* 男 */
+"male" = "男";
+
+/* 消息提醒 */
+"message_notification" = "消息提醒";
+
+/* 修改失败，请重试 */
+"modify_fail_retry" = "修改失败，请重试";
+
+/* 修改密码 */
+"modify_password" = "修改密码";
+
+/* 修改成功 */
+"modify_success" = "修改成功";
+
+/* 下一步 */
+"next_step" = "下一步";
+
+/* 昵称 */
+"nickname" = "昵称";
+
+/* 昵称暂不支持修改 */
+"nickname_can_not_modify" = "昵称暂不支持修改";
+
+/* 没有权限，请登录 */
+"no_permission" = "没有权限，请登录";
+
+/* 提示 */
+"notification" = "提示";
+
+/* 上架时间
+ 上架时间 ▾ */
+"online_time" = "上架时间";
+
+/* 密  码: */
+"password" = "密  码";
+
+/* 密码格式不正确 */
+"password_format_not_valid" = "密码格式不正确";
+
+/* 验证密码不匹配 */
+"password_not_match" = "验证密码不匹配";
+
+/* 手机号码 */
+"phone_number" = "手机号码";
+
+/* 手机号码不正确 */
+"phone_number_format_not_valid" = "手机号码不正确";
+
+/* 人气 */
+"popular" = "人气";
+
+/* 最近在玩 */
+"recently_playing" = "最近在玩";
+
+/* 充值 */
+"recharge" = "充值";
+
+/* 成功 */
+"recharge_already_pay" = "成功";
+
+/* 魔方 */
+"recharge_diamond" = "魔方";
+
+/* 赠送%@ */
+"recharge_gift_more" = "赠送%@";
+
+/* 金币 */
+"recharge_gold" = "金币";
+
+/* 价格: */
+"recharge_price" = "价格:";
+
+/* l 选择充值额度 */
+"recharge_select_product" = "l 选择充值额度";
+
+/* 推荐 */
+"recommend" = "推荐";
+
+/* 推荐 */
+"section_recommend" = "Recommend";
+
+/* 注册 */
+"register" = "注册";
+
+/* 注册成功 */
+"register_success" = "注册成功";
+
+/* *请牢记你的用户名和密码 */
+"remember_your_account_password" = "请牢记你的用户名和密码";
+
+/* 保存失败, 请重试 */
+"save_fail_retry" = "保存失败, 请重试";
+
+/* 保存截图 */
+"save_screenshot" = "保存截图";
+
+/* 保存成功 */
+"save_success" = "保存成功";
+
+/* 发送成功，请检查邮箱 */
+"send_success_check_mail" = "发送成功，请检查邮箱";
+
+/* 设置 */
+"setting" = "设置";
+
+/* 商店 */
+"shop" = "商店";
+
+/* shop_cart */
+"shop_cart" = "购物车";
+
+/* 聊天 */
+"tab_title_chat" = "聊天";
+
+/* 装饰 */
+"tab_title_decoration" = "装饰";
+
+/* 游戏 */
+"tab_title_games" = "游戏";
+
+/* 个人详情 */
+"tab_title_profile" = "更多";
+
+/* 点击修改 */
+"tap_to_modify" = "点击修改";
+
+/* 该账号已存在 */
+"the_account_exist" = "该账号已存在";
+
+/* 该账号不存在 */
+"the_account_not_exist" = "该账号不存在";
+
+/* 短信发送失败 */
+"the_msg_send_fail" = "短信发送失败";
+
+/* 该昵称已存在 */
+"the_nickname_exist" = "该昵称已存在";
+
+/* 昵称不合格 */
+"the_nickname_not_valid" = "昵称不合格";
+
+/* 密码错误 */
+"the_password_error" = "密码错误";
+
+/* 该手机已被使用 */
+"the_phone_has_been_used" = "该手机已被使用";
+
+/* 该手机未绑定账号 */
+"the_phone_not_bind_account" = "该手机未绑定账号";
+
+/* 系统无此装饰 */
+"the_system_has_no_the_decoration" = "系统无此装饰";
+
+/* 验证码错误 */
+"the_verification_code_error" = "验证码错误";
+
+/* 第三方账号登录 */
+"third_party_log_in" = "第三方账号登录";
+
+/* 装饰商城 */
+"title_decoration_shop" = "装饰商城";
+
+/* title_games_detail */
+"title_games_detail" = "游戏详情";
+
+/* 个人信息 */
+"title_profile_detail" = "个人信息";
+
+/* 购物车 */
+"title_shopping_cart" = "购物车";
+
+/* 上传失败，请重试 */
+"upload_fail" = "上传失败，请重试";
+
+/* 上传失败，请重试 */
+"upload_fail_retry" = "上传失败，请重试";
+
+/* 上传头像 */
+"upload_portrait" = "上传头像";
+
+/* 上传成功 */
+"upload_success" = "上传成功";
+
+/* 验证码格式不正确 */
+"verofication_code_format_not_valid" = "验证码格式不正确";
+
+/* 版本 */
+"version" = "版本";
+
+/* 您未拥有此装饰 */
+"you_dont_have_decoration" = "您未拥有此装饰";
+
+/* 你已经点过赞了 */
+"you_have_been_appreciate" = "你已经点过赞了";
+
+/* 账号验证失效，重新登录 */
+"authorization_fail_log_in" = "账号验证失效，重新登录";
+
+/* 当前网络不可用，请检查网络 */
+"network_lost_please_check" = "当前网络不可用，请检查网络";
+
+/* 绑定邮箱 */
+"bind_email" = "绑定邮箱";
+
+/* 绑定手机 */
+"bind_phone" = "绑定手机";
+
+/* 修改密码 */
+"modify_password" = "修改密码";
+
+/* 请选择 */
+"please_select" = "请选择";
+
+/* 未绑定 */
+"unbind" = "未绑定";
+
+/* 个人简介 */
+"title_introduction" = "个人简介";
+
+/* 暂无数据，轻点重试 */
+"no_data_tap_rety" = "暂无数据，轻点重试";
+
+/* 暂无数据 */
+"no_data" = "暂无数据";
+
+/* 还没玩过该游戏 */
+"without_play_game" = "还没玩过该游戏";
+
+/* 该邮箱未绑定账号 */
+"email_not_bind_user" = "该邮箱未绑定账号";
+
+/* 该邮箱已被使用 */
+"email_has_been_used" = "该邮箱已被使用";
+
+/* 该账号已绑定邮箱 */
+"account_has_bind_email" = "该账号已绑定邮箱";
+
+/* 未知来源 */
+"recharge_record_unknown" = "未知来源";
+
+/* 谷歌支付 */
+"recharge_record_google_pay" = "谷歌支付";
+
+/* 谷歌退款 */
+"recharge_record_google_refund" = "谷歌退款";
+
+/* 购买装饰 */
+"recharge_record_buy_decoration" = "购买装饰";
+
+/* 回收装饰 */
+"recharge_record_recycle_decoration" = "回收装饰";
+
+/* 游戏内购买道具 */
+"recharge_record_game_buy_props" = "游戏内购买道具";
+
+/* 购买物品失败退款 */
+"recharge_record_purchase_fail_refund" = "购买物品失败退款";
+
+/* 第三方支付 */
+"recharge_record_third_pay" = "第三方支付";
+
+/* 第三方支付退款 */
+"recharge_record_third_refund" = "第三方支付退款";
+
+/* 苹果支付 */
+"recharge_record_apple_pay" = "苹果支付";
+
+/* 游戏获取 */
+"recharge_record_fetch_from_game" = "游戏获取";
+
+/* 您未授权此应用访问设备的相册，请前往“设置”授权 */
+"no_permission_album_go_settings" = "您未授权此应用访问设备的相册，请前往“设置”授权";
+
+/* 正在加载.... */
+"loading" = "正在加载....";
+
+/* 6位以上数字或字母 */
+"more_than_six_digits_or_letters" = "(6位以上数字或字母)";
+
+/* 3位以上数字或字母 */
+"more_than_three_digits_or_letters" = "(3位以上数字或字母)";
+
+/* 商品数据请求失败 */
+"apppurchase_product_request_fail" = "商品数据请求失败";
+
+/* 处理未完成交易 */
+"apppurchase_resolve_unfinished_transaction" = "处理未完成交易";
+
+"vip_after_login" = "登录后才可以成为VIP，是否前往登录？";
+
+"recharge_after_login" = "登录后才可以充值，是否前往登录？";
+
+"buy_after_login" = "登录后才可以购买，是否前往登录？";
+
+"top_up" = "充值";
+
+"vip_mvp_app_logo" = "平台标识";
+
+"vip_mvp_game_logo" = "游戏内标识";
+
+"vip_mvp_change_skin" = "肤色切换(大量)";
+
+"vip_mvp_diamond_gift" = "每日返10钻石";
+
+"vip_mvp_clothes" = "专属装饰";
+
+"vip_mvp_discount" = "购买装饰打8折";
+
+"vip_mvp_gold_3" = "产出金币上限*3";
+
+"vip_mvp_friend_num" = "好友人数上限增加";
+
+"vip_mvp_gold_growth" = "产出金币速度提升2";
+
+"vip_mvp_action" = "专属动作";
+
+"vip_vip_up_change_skin" = "肤色切换(少量)";
+
+"vip_vip_up_diamond_gift" = "每日返3钻石";
+
+"vip_vip_up_discount" = "购买装饰打9折";
+
+"vip_vip_up_gold_growth" = "产出金币速度提升1.5";
+
+"vip_vip_up_gold_2" = "产出金币上限*2";
+
+"vip_vip_gold_1" = "产出金币上限*1.5";
+
+"vip_vip_gold_growth" = "产出金币速度提升1.2";
+
+"vip_title_text" = "尊敬的%@:您尚未开通任何会员服务";
+
+"vip_title_has_vip_text" = "尊敬的%@: 你的%@将于%@到期";
+
+"shop_car_vip_discount_tips" = "Tips：VIP+装饰打9折，MVP装饰打8折";
+
+"shop_car_vip_plus_discount" = "VIP+装饰打9折: ";
+
+"shop_car_mvp_discount" = "MVP装饰打8折: ";
+
+/* 在玩 */
+"playing" = " 在玩";
+
+"common_notification" = "提示";
+
+"common_receive_success" = "领取成功";
+
+"video_load_failed_close_retry" = "视频加载失败，请关闭重试";
+
+"daily_task_already_received" = "您已领取过该奖励";
+
+"golds_gift" = "金币大放送";
+
+"daily_reward_update_after_time" = "%@后更新";
+
+"balance_not_enough_then_recharge" = "当前账号余额不足\n请充值";
+
+"mailbox" = "邮箱";
+
+"have_no_mails" = "您暂时还没有邮件哦";
+
+"whether_clear_all_mails" = "是否清除所有邮件?";
+
+"mail_title" = "   标题: ";
+
+"mail_content" = "内容: ";
+
+"mail_delete_after_fifteen_days" = "邮件将于15天后删除";
+
+"mail_attachment" = "附件:";
+
+"receive" = "领取";
+
+"has_received" = "已领取";
+
+"common_delete" = "删除";
+
+"common_delete_success" = "删除成功";
+
+"common_delete_fail" = "删除失败";
+
+"vip_level_not_enough_then_payment" = "VIP等级不足，是否升级VIP?";
+
+"sign_in_after_login" = "登录后才可以签到，是否前往登录？";
+
+"play_game_after_login" = "登录后才可以玩这个游戏，是否前往登陆？";
+
+"vip_page_title" = "尊享特权(%d/%d)";
+
+"month" = "月";
+
+"year" = "年";
+
+"vip_discount_text" = "升级VIP+、MVP享受价格折扣";
+
+"vip_pay_title" = "会员开通";
+
+"vip_pay_open" = "开通/续费账号";
+
+"vip_pay_open_vip" = "开通";
+
+"vip_pay_renew_vip" = "续费";
+
+"vip_pay_renew_vip" = "升级";
+
+"vip_detail_title" = "特权详情";
+
+"vip_detail_target" = "特权对象";
+
+"unable_pay_vip_lower_than_yours" = "无法购买比您当前等级低的VIP";

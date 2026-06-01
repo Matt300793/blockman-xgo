@@ -1,0 +1,8 @@
+<MimeTypes>
+<!-- specifies MIME types for Minecraft-related files for picking files -->
+<type mimetype="application/x-schematic" extension=".schematic"/>
+    <type mimetype="application/x-ptpatch" extension=".mod"/>
+    <type mimetype="application/javascript" extension=".js"/>
+    <type mimetype="text/coffeescript" extension=".coffee"/>
+    <type mimetype="text/literate-coffeescript" extension=".litcoffee"/>
+</MimeTypes>

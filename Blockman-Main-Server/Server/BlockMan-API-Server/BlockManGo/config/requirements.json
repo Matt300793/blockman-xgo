@@ -1,0 +1,18 @@
+{
+    "bypassAuthCheck": [
+        "/config/files/:configFile",
+        "/user/api/v1/app/renew",
+        "/user/api/v1/app/login",
+        "/game/api/v1/games/announcement/info",
+        "/game/api/v1/games/stop/announcement/info",
+        "/game/api/v2/games/recommendation/type",
+        "/game/api/v1/games"
+    ],
+    "bypassProfileCheck": [
+        "/user/api/v1/login-out",
+        "/user/api/v1/app/set-password",
+        "/user/api/v1/user/password/modify",
+        "/user/api/v1/user/register",
+        "/user/api/v1/user/device/binding"
+    ]
+}

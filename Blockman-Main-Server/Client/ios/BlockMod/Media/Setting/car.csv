@@ -1,0 +1,5 @@
+CarId	Name	Model	Texture	MoneyType	Price	Slope	TurnSpeed	SpeedSound	NormalSound	ExtraSound	Traction	MaxSpeed	Weight	Passengers
+门ID	名字	模型	贴图	购买货币类型	价格	可爬坡度	拐弯速度	加速音效	巡航音效	额外音效	牵引力	最大速度	重量	乘客数量
+1	PoliceCar	car01.actor	dfd	100	0	1	3	1	1	1	0.1	0.7	1.5	4
+2	car	car02.actor		120	10000	1	3	1	1	1	0.1	1	1.2	2
+3	car3	car03.actor		150	25000	1	3	1	1	1	0.15	1.1	1.5	2

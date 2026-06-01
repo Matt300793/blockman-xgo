@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="CategoryViewModel"
+            type="com.sandboxol.blockymods.view.fragment.category.CategoryViewModel"/>
+
+        <import type="me.tatarka.bindingcollectionadapter.LayoutManagers"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mainBgColor"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@color/gameCategoryTitleBgColor"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/llCategory"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                bind:onClickCommand="@{CategoryViewModel.onClickCategoryCommand}">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:paddingRight="4dp"
+                    android:text="@{CategoryViewModel.gameOrderText}"
+                    android:textColor="@color/itemTextHintColor"
+                    android:textSize="13sp"/>
+
+                <CheckBox
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/ic_cb_category_arrow_selector"
+                    android:button="@null"
+                    android:checked="@{CategoryViewModel.gameOrderCheck}"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/borderLineHeight"
+                android:layout_height="match_parent"
+                android:background="@color/borderLineColor"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    bind:onCheckCommand="@{CategoryViewModel.onCheckChangeCommand}">
+
+                    <RadioButton
+                        android:id="@+id/rbAll"
+                        style="@style/CategoryFragmentItemStyle"
+                        android:checked="true"
+                        android:text="@string/category_all"/>
+
+                    <RadioButton
+                        android:id="@+id/rbPvp"
+                        style="@style/CategoryFragmentItemStyle"
+                        android:text="@string/category_pvp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbManage"
+                        style="@style/CategoryFragmentItemStyle"
+                        android:text="@string/category_business"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAdventure"
+                        style="@style/CategoryFragmentItemStyle"
+                        android:text="@string/category_adventure"/>
+
+                    <RadioButton
+                        android:id="@+id/rbGun"
+                        style="@style/CategoryFragmentItemStyle"
+                        android:text="@string/category_shootout"/>
+
+                </RadioGroup>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <com.sandboxol.common.widget.rv.pagerv.PageRecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:paddingBottom="@dimen/bottomHeight"
+            bind:layoutFactory="@{LayoutManagers.grid(2)}"
+            bind:listLayout="@{CategoryViewModel.categoryListLayout}"
+            bind:model="@{CategoryViewModel.categoryGameModel}"
+            bind:size="10"/>
+
+    </LinearLayout>
+
+</layout>

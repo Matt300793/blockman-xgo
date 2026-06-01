@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="MiniGameDetailViewModel"
+            type="com.sandboxol.blockymods.view.fragment.minigamedetail.MiniGameDetailViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/defaultMargin"
+                android:paddingRight="@dimen/defaultMargin"
+                android:paddingTop="14dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/itemDefaultColor"
+                    android:minHeight="200dp"
+                    android:padding="@dimen/defaultMargin">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        bind:uri="@{MiniGameDetailViewModel.coverPic}"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/gameDetailImageBottomBg"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{MiniGameDetailViewModel.gameTitle}"
+                                android:textColor="@android:color/white"
+                                android:textSize="19sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@{MiniGameDetailViewModel.gameType}"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/textSize11Sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            bind:onClickCommand="@{MiniGameDetailViewModel.onClickAppreciationCommand}"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:background="@drawable/ic_favourite_selector"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="false"
+                                android:button="@null"
+                                android:checked="@{MiniGameDetailViewModel.isPraise}"
+                                android:layout_marginRight="5dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{MiniGameDetailViewModel.praiseNumber}"
+                                android:textColor="@color/itemTextDefaultColor"
+                                android:textSize="@dimen/textSize14Sp"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/itemDefaultColor"
+                    android:orientation="vertical"
+                    android:padding="@dimen/defaultMargin">
+
+                    <TextView
+                        style="@style/GameFragmentSecondTitleStyle"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:text="@string/game_detail_introduction"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@{MiniGameDetailViewModel.gameDetail}"
+                        android:textColor="@color/itemTextHintColor"
+                        android:textSize="@dimen/textSize14Sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_game_detail_btn">
+
+            <Button
+                style="@style/GreenButtonStyle"
+                android:layout_centerInParent="true"
+                bind:onClickCommand="@{MiniGameDetailViewModel.onEnterGameCommand}"
+                android:text="@string/game_detail_quick_enter"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,191 @@
+<resources>
+
+
+
+
+    <string name="app_name">Blocky Mods</string>
+    <string name="finish">OK</string>
+    <string name="sure">OK</string>
+    <string name="cancel">Cancela</string>
+    <string name="Nada"> </string>
+    <string name="modify_success">Modificado com sucesso</string>
+    <string name="tip">Dica</string>
+    <string name="close">Fechar</string>
+    <string name="coming_soon">Em Breve</string>
+    <string name="next">Próximo</string>
+    <string name="exit">Clique em novo para sair</string>
+
+    <string name="main_game">Jogo</string>
+    <string name="main_dress">Vestir</string>
+    <string name="main_chat">Bate-Papo</string>
+    <string name="main_more">Mais</string>
+
+    <string name="me_shop">Loja</string>
+    <string name="me_recharge">Completar</string>
+    <string name="me_setting">Configurações</string>
+    <string name="me_help">Ajuda</string>
+
+    <string name="account_title">Blocky Mods</string>
+    <string name="account_name">Conta</string>
+    <string name="account_password">Senha</string>
+    <string name="account_retype_password">Confirmar Senha</string>
+    <string name="account_login">Login</string>
+    <string name="account_register">Registrar</string>
+    <string name="account_exit_login">Sair</string>
+    <string name="account_forget_password">Esqueceu a Senha</string>
+    <string name="account_create_account">Criar Conta</string>
+    <string name="account_has_account">Já tem uma conta</string>
+    <string name="account_third_party_login">— Third party account login—</string>
+    <string name="account_enter_nick_name">Coloque Seu Nome</string>
+    <string name="account_upload_icon">Carregar</string>
+    <string name="account_sex">Gênero：</string>
+    <string name="account_male">Masculino</string>
+    <string name="account_female">Feminino</string>
+    <string name="account_year">Ano</string>
+    <string name="account_month">Mês</string>
+    <string name="account_day">Dia</string>
+    <string name="account_done">Completa</string>
+    <string name="account_nick_name_empty">O Espaço de Nome não pode fica vazio</string>
+    <string name="account_sex_empty">Escolha de gênero</string>
+    <string name="account_account_empty">A conta não pode ficar vazia</string>
+    <string name="account_password_less_6">senha não deve ser inferior a 6 Dígitos</string>
+    <string name="account_password_empty">a aba da senha não pode Fica vazia</string>
+    <string name="account_confirm_password_empty">a aba da senha não pode Fica vazia</string>
+    <string name="account_password_not_compare">a Senha é inconsistente</string>
+    <string name="account_email_is_empty">A Aba de email não pode fica vazia</string>
+    <string name="account_choose_photo">Selecione</string>
+    <string name="account_exist">Este usuário já existe</string>
+    <string name="account_not_exist">este usuário não existe</string>
+    <string name="account_nickname_exist">Este nome já existe tente outro</string>
+    <string name="account_message_exist">a informações da conta foi atualizada</string>
+    <string name="account_login_success">você teve sucesso ao fazer o login</string>
+    <string name="account_register_failed">Deu Falha Ao se Registrar</string>
+    <string name="account_register_success">Você teve sucesso ao se registrar</string>
+    <string name="account_upload_icon_failed">Falha ao carregar</string>
+    <string name="account_register_finish_account">Seu nome: %s</string>
+    <string name="account_register_finish_password">Senha: %s</string>
+    <string name="account_register_finish_hint">*por favor Lembre do seu Nome de usuário e senha</string>
+    <string name="account_register_finish_save">Salvo</string>
+    <string name="account_register_finish_save_success">Salvo com Sucesso</string>
+
+    <string name="item_view_personal_details">Informações Pessoais</string>
+    <string name="item_view_change_nick_name">Modificar Seu Nome</string>
+    <string name="item_view_nick_name">Nome</string>
+    <string name="item_view_icon">ícone</string>
+    <string name="item_view_sex">Gênero</string>
+    <string name="item_view_birthday">aniversário</string>
+    <string name="item_view_details">Perfil pessoal</string>
+    <string name="item_view_account_safe">Segurança</string>
+    <string name="item_view_reminder">Lembrete</string>
+    <string name="item_view_question">Feedback</string>
+    <string name="item_view_check_version">atualização</string>
+    <string name="item_view_about">Sobre Blocky Mods</string>
+    <string name="item_view_change_password">Modificar Senha</string>
+    <string name="item_view_click_modify">Modificar</string>
+    <string name="item_view_email">Caixa De Correio</string>
+    <string name="item_view_no_email">Unbound</string>
+    <string name="item_view_phone">Número de Telefone</string>
+    <string name="item_view_bind_phone">Telefone De Comunicação</string>
+    <string name="item_view_bind_email">Caixa De Correio Pra Comunicação</string>
+    <string name="item_view_forget_password">Redefinir a Senha</string>
+
+    <string name="change_name_hint">Coloque Seu Nome…</string>
+    <string name="change_name_success">Nome Modificado Com Sucesso!</string>
+    <string name="change_name_no_support">Não É Suportado modificar o nome</string>
+    <string name="change_detail_hint">Apresentação…</string>
+    <string name="change_password_default_hint">Coloque a senha original</string>
+    <string name="change_password_new_hint">Coloque a Nova Senha</string>
+    <string name="change_password_reply_hint">Re-coloque a nova senha</string>
+    <string name="change_password_wrong">A senha está errada</string>
+    <string name="change_password_success">Senha modificada com sucesso!</string>
+    <string name="change_password_old_empty">A senha original não pode fica vazia</string>
+    <string name="change_password_new_empty">A Aba Da nova senha nao pode fica vazia</string>
+    <string name="change_password_email_empty">a aba do E-mail não pode fica vazia!</string>
+    <string name="change_password_email_not_bind">o Seu imail não esta vinculado a conta</string>
+    <string name="change_password_email_success">Enviado com sucesso. Confirme-o na Sua caixa de e-mail</string>
+
+    <string name="bind_phone_place">Localização</string>
+    <string name="bind_phone_place_hint">China+86</string>
+    <string name="bind_phone_phone_hint">Digite Seu número de telefone</string>
+    <string name="bind_phone_code_hint">Verifique se chegou o código de verificação</string>
+    <string name="bind_phone_get_code_hint">Obter código de validação</string>
+    <string name="bind_phone_code_send_success">Recebido com sucesso!</string>
+    <string name="bind_phone_no_bind">Não Consolidado</string>
+    <string name="bind_phone_no_bind_phone">O Número de telefone esta desabilitado</string>
+    <string name="bind_phone_bind_success">Número de Telefone Ligado com sucesso!</string>
+    <string name="bind_unbind_success">Sucesso do desdobramento</string>
+    <string name="bind_phone_phone_has_been_bind">O número de telefone foi usado</string>
+    <string name="bind_phone_user_has_bind">A conta foi vinculada ao telefone</string>
+    <string name="bind_phone_send_code_failed">Falha Na Verificação Do Código</string>
+    <string name="bind_phone_code_error">Erro na verificação do código</string>
+    <string name="bind_phone_un_bind">Não consolidado</string>
+    <string name="bind_phone_code_is_empty">O código de verificação não pode estar vazio</string>
+    <string name="bind_phone_unbind_error">Desbloqueio falhou</string>
+    <string name="bind_phone_never_bind_phone">No binding phone</string>
+    <string name="bind_phone_phone_num">Número de Telefone: %s</string>
+
+    <string name="bind_email_hint">Entre Com O seu e-mail</string>
+    <string name="bind_email_code_hint">Digite o código de autenticação enviado no seu e-mail</string>
+    <string name="bind_email_pattern_error">Erro no formato de Sua caixa de correio</string>
+    <string name="bind_email_not_exist">Este Email Não Existe!</string>
+    <string name="bind_email_has_bind">A caixa de correio foi vinculada</string>
+    <string name="bind_email_user_has_bind">Caixa de correio já vinculada</string>
+    <string name="bind_email_bind">Obrigatório</string>
+    <string name="bind_email_never_bind_email">Caixa De Correio Desabilitada</string>
+
+    <string name="icon_select_fails">O recorte de avatar falhou. Por favor, tente novamente</string>
+    <string name="reminder_open_remind">Aviso de envio de mensagem aberto</string>
+    <string name="reminder_open_personal">Notificação de mensagem privada</string>
+    <string name="more_fragment_details">Introdução: %s</string>
+    <string name="more_fragment_no_details">Vazio</string>
+    <string name="more_fragment_gold">$%d</string>
+    <string name="more_fragment_visitor">Guest</string>
+    <string name="more_fragment_no_login">Não Logado</string>
+    <string name="update_info_please_choose">Selecione</string>
+
+    <string name="game_fragment_recommend">Recomendado</string>
+    <string name="game_fragment_lately_play">Recente</string>
+    <string name="game_fragment_friend_play">Amigos\' Jogando</string>
+    <string name="game_fragment_classification">Classificar</string>
+    <string name="game_fragment_change">Alterar</string>
+
+    <string name="game_item_title_text">Começar</string>
+    <string name="game_item_type_text">%1$s | %2$s | %3$s</string>
+
+    <string name="game_detail_quick_enter">Rápido Em</string>
+    <string name="game_detail_introduction">Introdução</string>
+    <string name="game_details_default_detail">Vazio</string>
+    <string name="game_detail_appreciation_not_login">É Bom Fazer O Login</string>
+    <string name="game_detail_appreciation_game_not_exist">O jogo não existe</string>
+    <string name="game_detail_appreciation_game_has_appreciation">Não consigo repetir curtir</string>
+    <string name="game_detail_appreciation_game_not_play">Gosta de jogar</string>
+
+    <string name="category_all">Todos</string>
+    <string name="category_pvp">PVP</string>
+    <string name="category_business">SIM</string>
+    <string name="category_adventure">AVG</string>
+    <string name="category_shootout">STG</string>
+    <string name="category_online_time">Tempo de atividade</string>
+    <string name="category_population">Gostaram</string>
+    <string name="category_appreciation">Populares</string>
+    <string name="category_no_data">Não há jogos Desse Estilo no momento, escolha outra categoria</string>
+
+    <string name="connect_server_failure_error">A Conexão Com O servidor falho tente novamnete</string>
+    <string name="dialog_enter_game_timer">O servidor esta cheio, Espere\ Tempo de espera: %s</string>
+    <string name="dialog_check_app_version_content">Atualizar conteúdo</string>
+    <string name="dialog_check_app_version_failed">Falha Ao Procurar atualizações</string>
+    <string name="dialog_button_update">Atualize</string>
+
+    <string name="app_is_latest">Blocky Mods é a versão mais recente</string>
+    <string name="app_not_latest">Blocky Mods tem uma nova versão, atualizar ou não?</string>
+
+    <string name="fb_login_cancel">O Login Com o Facebook foi cancelado</string>
+    <string name="fb_login_failed">Deu falha ao tentar fazer login pelo Facebook</string>
+
+    <string name="about_text">Copyright © 2017 Blocky Mods.</string>
+    <string name="about_text_2">Todos os direitos reservados.</string>
+    <string name="about_version">Versão </string>
+
+    <!--2017-11-29 11:45:33-->
+
+</resources>

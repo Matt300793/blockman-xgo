@@ -1,0 +1,16 @@
+- name: deploy {{ service }}
+  hosts: "{{ service }}"
+  remote_user: deploy
+  vars:
+    work_dir: "{{ playdir }}"
+  tasks:
+  - name: cp {{ service }} jar
+    copy: |
+      src={{ work_dir }}/apps/{{ service }}-0.0.1-SNAPSHOT.jar
+      dest=/home/deploy/apps/{{ service }}-0.0.1-SNAPSHOT.jar
+      backup=yes
+      mode=600 
+  - name: restart
+    supervisorctl: |
+      name="{{service}}"
+      state=restarted

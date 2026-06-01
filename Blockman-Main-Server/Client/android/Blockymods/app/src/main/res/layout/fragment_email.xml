@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="EmailViewModel"
+            type="com.sandboxol.blockymods.view.fragment.email.EmailViewModel"/>
+
+        <import type="com.sandboxol.blockymods.entity.AccountCenter"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <com.sandboxol.blockymods.view.widget.ItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                bind:border="false"
+                bind:rightText="@{AccountCenter.newInstance().email}"
+                bind:leftText="@string/item_view_email"
+                bind:showPoint="false"/>
+
+        </LinearLayout>
+
+        <Button
+            style="@style/GreenButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="@dimen/defaultMargin"
+            android:layout_marginRight="@dimen/defaultMargin"
+            android:layout_marginTop="20dp"
+            android:text="@string/bind_phone_un_bind"
+            bind:onClickCommand="@{EmailViewModel.onUnbindingCommand}"/>
+
+    </LinearLayout>
+
+</layout>

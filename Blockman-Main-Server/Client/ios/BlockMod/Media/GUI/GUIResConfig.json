@@ -1,0 +1,61 @@
+{
+  "ResConfig": {
+    "Font": [
+	  {
+        "Type": "FreeType",
+        "Name": "HT28",
+        "Filename": "FZY4JW.ttf",
+		"Language": "zh_CN,en_US,zh_TW",
+        "Size": 14
+	  },{
+        "Type": "FreeType",
+        "Name": "HT28",
+        "Filename": "TahomaBold.ttf",
+		"Language": "tr_TR,vi_VN,it_IT,id_ID,fr_FR,es_ES,de_DE,pt_BR,ru_RU",
+        "Size": 14
+	  },{
+        "Type": "FreeType",
+        "Name": "HT28",
+        "Filename": "ko.TTF",
+		"Language": "ko_KR",
+        "Size": 14
+	  }
+    ],
+    "Imageset": [
+      { "Filename": "MainControlImageSet.json" },
+	  { "Filename": "items_gui.json" },
+	  { "Filename": "inventory.json" },
+	  { "Filename": "widgets.json" },
+	  { "Filename": "Blocks_gui.json"},
+	  { "Filename": "compass_gui.json"},
+	  { "Filename": "clock_gui.json"},
+	  { "Filename": "creative_inventory.json"},
+	  { "Filename": "mask.json"},
+	  { "Filename": "Pack.json"},
+	  { "Filename": "background.json"},
+	  { "Filename": "icons.json"},
+	  { "Filename": "christmas_ui.json"},
+  	  { "Filename": "ender_ui.json"},
+  	  { "Filename": "normal_ui.json"},
+  	  { "Filename": "trapped_ui.json"},
+	  { "Filename": "gui_material.json"},
+	  { "Filename": "loading_page_bg.json"},
+	  { "Filename": "gui_inventory_icon.json"},
+	  { "Filename": "new_gui_material.json"},
+	  { "Filename": "player_info_icon.json"},
+	  { "Filename": "gui_shop.json"},
+	  { "Filename": "summary.json"},
+	  { "Filename": "wordart.json"},
+	  { "Filename": "wordart_zh_cn.json" },
+	  { "Filename": "gameloading.json" },
+	  { "Filename": "teamInfo.json" },
+	  { "Filename": "gun.json" },
+	  { "Filename": "app_shop.json" },
+	  { "Filename": "other_icon.json"},
+	  { "Filename": "jail_break.json"},
+	  { "Filename": "shop_tab_icon.json"},
+	  { "Filename": "sandDigger.json"},
+	  { "Filename": "loadingBlock.json"}
+    ]
+  }
+}

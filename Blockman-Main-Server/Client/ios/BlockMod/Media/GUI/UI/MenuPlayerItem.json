@@ -1,0 +1,138 @@
+{
+    "Dialog": {
+        "Window": {
+            "Type": "Layout",
+            "Name": "MenuPlayerItem",
+            "Property": [
+                {
+                    "Name": "Area",
+                    "Value": "{{0,0},{0,0},{1,0},{0,70}}"
+                }
+            ],
+            "Window": [
+                {
+                    "Type": "StaticText",
+                    "Name": "MenuPlayerItem-Name",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0.02,0},{0,0},{0.2,0},{1,0}}"
+                        },
+                        {
+                            "Name": "Text",
+                            "Value": "AAAAAAAAAAAAAAAA"
+                        },
+                        {
+                            "Name": "TextColor",
+                            "Value": "0.92549 0.870588 0.788235 1"
+                        },
+                        {
+                            "Name": "TextHorzAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "TextVertAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "TextBorder",
+                            "Value": "true"
+                        }
+                    ]
+                },
+                {
+                    "Type": "StaticImage",
+                    "Name": "MenuPlayerItem-Team-Icon",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0.21,0},{0,0},{0.21,33},{0,33}}"
+                        },
+                        {
+                            "Name": "VerticalAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "ImageName",
+                            "Value": "set:new_gui_material.json image:menu_player_item_team_icon"
+                        },
+                        {
+                            "Name": "HexgonTopImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonTopColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonSideImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonSideColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonOverlayerImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonOverlayerColor",
+                            "Value": "1 1 1 1"
+                        }
+                    ]
+                },
+                {
+                    "Type": "StaticImage",
+                    "Name": "MenuPlayerItem-Line",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,0},{0,0},{1,0},{0,4}}"
+                        },
+                        {
+                            "Name": "VerticalAlignment",
+                            "Value": "Bottom"
+                        },
+                        {
+                            "Name": "StretchType",
+                            "Value": "NineGrid"
+                        },
+                        {
+                            "Name": "StretchOffset",
+                            "Value": "1 1 0 0"
+                        },
+                        {
+                            "Name": "ImageName",
+                            "Value": "set:new_gui_material.json image:menu_player_item_line"
+                        },
+                        {
+                            "Name": "HexgonTopImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonTopColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonSideImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonSideColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonOverlayerImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonOverlayerColor",
+                            "Value": "1 1 1 1"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

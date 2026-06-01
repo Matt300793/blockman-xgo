@@ -1,0 +1,49 @@
+{
+	"frames": 
+	{
+		"main":
+		{
+			"filename": "加载页切片_03.png",
+			"frame": {"x":0,"y":0,"w":1280,"h":720},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":1280,"h":720},
+			"sourceSize": {"w":1280,"h":720},
+			"pivot": {"x":0.5,"y":0.5},
+			"offset": {"x": 0,"y": 0}
+		},
+		"SliderFg":
+		{
+			"filename": "加载页切片_07.png",
+			"frame": {"x":1289,"y":12,"w":13,"h":12},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":13,"h":12},
+			"sourceSize": {"w":13,"h":12},
+			"pivot": {"x":0.5,"y":0.5},
+			"offset": {"x": 0,"y": 0}
+		},
+		"SliderBg":
+		{
+			"filename": "加载页切片_11.png",
+			"frame": {"x":1289,"y":0,"w":14,"h":12},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":14,"h":12},
+			"sourceSize": {"w":14,"h":12},
+			"pivot": {"x":0.5,"y":0.5},
+			"offset": {"x": 0,"y": 0}
+		}
+	},
+
+	"meta": 
+	{
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "gameloading.png",
+		"format": "RGBA8888",
+		"size": {"w":1303,"h":720},
+		"scale": "1",
+		"smartupdate": "$TexturePacker:SmartUpdate:ef8160820f7e17ac2aec3c9e713d42ad:2366753eec457b9ad844a29d7218511a:4ba9d450c578eb75c2642def15ffdfa4$"
+	}
+}

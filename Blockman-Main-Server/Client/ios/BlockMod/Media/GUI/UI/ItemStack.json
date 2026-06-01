@@ -1,0 +1,80 @@
+{
+    "Dialog": {
+        "Window": {
+            "Type": "Layout",
+            "Name": "ItemStack",
+            "Property": [
+                {
+                    "Name": "Area",
+                    "Value": "{{0,0},{0,0},{0,50},{0,50}}"
+                },
+                {
+                    "Name": "Touchable",
+                    "Value": "false"
+                }
+            ],
+            "Window": [
+                {
+                    "Type": "StaticImage",
+                    "Name": "ItemStack-icon",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,0},{0,0},{1,0},{1,0}}"
+                        },
+                        {
+                            "Name": "Touchable",
+                            "Value": "false"
+                        },
+                        {
+                            "Name": "HexgonTopImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonTopColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonSideImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonSideColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonOverlayerImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonOverlayerColor",
+                            "Value": "1 1 1 1"
+                        }
+                    ]
+                },
+                {
+                    "Type": "StaticText",
+                    "Name": "ItemStack-count",
+                    "Property": [
+                        {
+                            "Name": "DrawColor",
+                            "Value": "0 0 0 1"
+                        },
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,0},{0,-4},{0.45,0},{0.35,-4}}"
+                        },
+                        {
+                            "Name": "Text",
+                            "Value": "99"
+                        },
+                        {
+                            "Name": "Touchable",
+                            "Value": "false"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

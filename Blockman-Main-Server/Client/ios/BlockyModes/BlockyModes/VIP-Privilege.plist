@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>thumbnailName</key>
+			<string>vip_app_logo</string>
+			<key>localizedTitleKey</key>
+			<string>mvp_app_logo</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP, VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>vip_game_logo</string>
+			<key>localizedTitleKey</key>
+			<string>mvp_game_logo</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP, VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>vip_gold_1</string>
+			<key>localizedTitleKey</key>
+			<string>vip_gold_1</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP, VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>vip_gold_growth</string>
+			<key>localizedTitleKey</key>
+			<string>vip_gold_growth</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP, VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>vip_clothes</string>
+			<key>localizedTitleKey</key>
+			<string>mvp_clothes</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP, VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>mvp_friend_num</string>
+			<key>localizedTitleKey</key>
+			<string>mvp_friend_num</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP, VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>mvp_change_skin</string>
+			<key>localizedTitleKey</key>
+			<string>vip_up_change_skin</string>
+			<key>enable</key>
+			<false/>
+			<key>supportLevel</key>
+			<string>VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>mvp_diamond_gift</string>
+			<key>localizedTitleKey</key>
+			<string>vip_up_diamond_gift</string>
+			<key>enable</key>
+			<false/>
+			<key>supportLevel</key>
+			<string>VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>vip_up_discount</string>
+			<key>localizedTitleKey</key>
+			<string>vip_up_discount</string>
+			<key>enable</key>
+			<false/>
+			<key>supportLevel</key>
+			<string>VIP+, MVP</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>thumbnailName</key>
+			<string>vip_up_app_logo</string>
+			<key>localizedTitleKey</key>
+			<string>mvp_app_logo</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP, VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>vip_up_game_logo</string>
+			<key>localizedTitleKey</key>
+			<string>mvp_game_logo</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP, VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>mvp_change_skin</string>
+			<key>localizedTitleKey</key>
+			<string>vip_up_change_skin</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>mvp_diamond_gift</string>
+			<key>localizedTitleKey</key>
+			<string>vip_up_diamond_gift</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>vip_up_clothes</string>
+			<key>localizedTitleKey</key>
+			<string>mvp_clothes</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP, VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>vip_up_discount</string>
+			<key>localizedTitleKey</key>
+			<string>vip_up_discount</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>vip_up_gold_growth</string>
+			<key>localizedTitleKey</key>
+			<string>vip_up_gold_growth</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>vip_up_gold_2</string>
+			<key>localizedTitleKey</key>
+			<string>vip_up_gold_2</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>mvp_friend_num</string>
+			<key>localizedTitleKey</key>
+			<string>mvp_friend_num</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP, VIP+, MVP</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>thumbnailName</key>
+			<string>mvp_app_logo</string>
+			<key>localizedTitleKey</key>
+			<string>mvp_app_logo</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP, VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>mvp_game_logo</string>
+			<key>localizedTitleKey</key>
+			<string>mvp_game_logo</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP, VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>mvp_change_skin</string>
+			<key>localizedTitleKey</key>
+			<string>mvp_change_skin</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>mvp_diamond_gift</string>
+			<key>localizedTitleKey</key>
+			<string>mvp_diamond_gift</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>mvp_clothes</string>
+			<key>localizedTitleKey</key>
+			<string>mvp_clothes</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP, VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>mvp_discount</string>
+			<key>localizedTitleKey</key>
+			<string>mvp_discount</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>mvp_gold_3</string>
+			<key>localizedTitleKey</key>
+			<string>mvp_gold_3</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>mvp_friend_num</string>
+			<key>localizedTitleKey</key>
+			<string>mvp_friend_num</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP, VIP+, MVP</string>
+		</dict>
+		<dict>
+			<key>thumbnailName</key>
+			<string>mvp_gold_growth</string>
+			<key>localizedTitleKey</key>
+			<string>mvp_gold_growth</string>
+			<key>enable</key>
+			<true/>
+			<key>supportLevel</key>
+			<string>VIP, VIP+, MVP</string>
+		</dict>
+	</array>
+</array>
+</plist>

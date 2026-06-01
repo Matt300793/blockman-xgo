@@ -1,0 +1,96 @@
+{
+"code": 1,
+  "message": "OK",
+  "data": {
+    "versionCode": 3903,
+    "apkUrl": "https://mega.nz/file/HpQ3DL4Y#rf-RnJ65-8haJcHLABMI-S4uAFu9VSYuH32d17kj5_w",
+    "picUrl": "",
+    "updateInfo": "What\u0027s new in 2.70.1\n1.New event launched: Smash the Golden Egg.\n2.Optimized game entry speed.",
+    "langMap": {
+      "en_US": {
+        "normal": "There is an update, if you are already using update 1.1.2 then click cancel.",
+        "forcible": "There is an update, if you are already using update 1.1.2 then click cancel."
+      },
+      "fr_FR": {
+        "normal": "Quoi de neuf dans 2.70.1\n1.Nouvel événement en ligne : Cassez l\u0027Œuf d\u0027Or.\n2.Optimisation de la vitesse d\u0027entrée dans le jeu.",
+        "forcible": "Quoi de neuf dans 2.70.1\n1.Nouvel événement en ligne : Cassez l\u0027Œuf d\u0027Or.\n2.Optimisation de la vitesse d\u0027entrée dans le jeu."
+      },
+      "ko_KR": {
+        "normal": "2.70.1의 새로운 기능\n1.새 이벤트 출시: 황금 달걀 깨기.\n2.게임 진입 속도 최적화.",
+        "forcible": "2.70.1의 새로운 기능\n1.새 이벤트 출시: 황금 달걀 깨기.\n2.게임 진입 속도 최적화."
+      },
+      "ja_JP": {
+        "normal": "2.70.1の新機能\n1.新しいイベントが登場：ゴールデンエッグを割ろう。\n2.ゲームの起動速度を最適化。",
+        "forcible": "2.70.1の新機能\n1.新しいイベントが登場：ゴールデンエッグを割ろう。\n2.ゲームの起動速度を最適化。"
+      },
+      "de_DE": {
+        "normal": "Was ist neu in 2.70.1\n1.Neues Event gestartet: Zerschmettere das Goldene Ei.\n2.Optimiert die Eingangsgeschwindigkeit des Spiels.",
+        "forcible": "Was ist neu in 2.70.1\n1.Neues Event gestartet: Zerschmettere das Goldene Ei.\n2.Optimiert die Eingangsgeschwindigkeit des Spiels."
+      },
+      "it_IT": {
+        "normal": "There is an update, if you are already using update 1.1.2 then click cancel.",
+        "forcible": "There is an update, if you are already using update 1.1.2 then click cancel."
+      },
+      "pl_PL": {
+        "normal": "Co nowego w 2.70.1\n1.Nowe wydarzenie online: Rozbij Złote Jajo.\n2.Zoptymalizowano prędkość wejścia do gry.",
+        "forcible": "Co nowego w 2.70.1\n1.Nowe wydarzenie online: Rozbij Złote Jajo.\n2.Zoptymalizowano prędkość wejścia do gry."
+      },
+      "pt_BR": {
+        "normal": "O que há de novo em 2.70.1\n1.Novo evento lançado: Smash the Golden Egg.\n2.Velocidade de entrada do jogo otimizada.",
+        "forcible": "O que há de novo em 2.70.1\n1.Novo evento lançado: Smash the Golden Egg.\n2.Velocidade de entrada do jogo otimizada."
+      },
+      "pt_PT": {
+        "normal": "O que há de novo em 2.70.1\n1.Novo evento lançado: Smash the Golden Egg.\n2.Velocidade de entrada do jogo otimizada.",
+        "forcible": "O que há de novo em 2.70.1\n1.Novo evento lançado: Smash the Golden Egg.\n2.Velocidade de entrada do jogo otimizada."
+      },
+      "th_TH": {
+        "normal": "มีอะไรใหม่ใน 2.70.1\n1. เปิดตัวกิจกรรมใหม่: ทุบไข่ทองคำ\n2. ปรับปรุงความเร็วในการเข้าเกม",
+        "forcible": "มีอะไรใหม่ใน 2.70.1\n1. เปิดตัวกิจกรรมใหม่: ทุบไข่ทองคำ\n2. ปรับปรุงความเร็วในการเข้าเกม"
+      },
+      "ru_RU": {
+        "normal": "There is an update, if you are already using update 1.1.2 then click cancel.",
+        "forcible": "There is an update, if you are already using update 1.1.2 then click cancel."
+      },
+      "hi_IN": {
+        "normal": "2.70.1 . में नया क्या है\n1.नया इवेंट लॉन्च किया गया: स्मैश द गोल्डन एग।\n2. अनुकूलित खेल प्रविष्टि गति।",
+        "forcible": "2.70.1 . में नया क्या है\n1.नया इवेंट लॉन्च किया गया: स्मैश द गोल्डन एग।\n2. अनुकूलित खेल प्रविष्टि गति।"
+      },
+      "tr_TR": {
+        "normal": "2.70.1 sürümündeki yenilikler\n1.Yeni etkinlik başlatıldı: Altın Yumurtayı Parçala.\n2.Optimize edilmiş oyun giriş hızı.",
+        "forcible": "2.70.1 sürümündeki yenilikler\n1.Yeni etkinlik başlatıldı: Altın Yumurtayı Parçala.\n2.Optimize edilmiş oyun giriş hızı."
+      },
+      "es_ES": {
+        "normal": "Novedades en 2.70.1\n1. Lanzamiento de un nuevo evento: Smash the Golden Egg.\n2.Velocidad de entrada al juego optimizada.",
+        "forcible": "Novedades en 2.70.1\n1. Lanzamiento de un nuevo evento: Smash the Golden Egg.\n2.Velocidad de entrada al juego optimizada."
+      },
+      "in_ID": {
+        "normal": "Apa yang baru di 2.70.1\n1.Acara baru diluncurkan: Hancurkan Telur Emas.\n2. Kecepatan masuk game yang dioptimalkan.",
+        "forcible": "Apa yang baru di 2.70.1\n1.Acara baru diluncurkan: Hancurkan Telur Emas.\n2. Kecepatan masuk game yang dioptimalkan."
+      },
+      "vi_VN": {
+        "normal": "Có gì mới trong 2.70.1\n1.Sự kiện mới ra mắt: Đập vỡ quả trứng vàng.\n2.Tối ưu hóa tốc độ vào game.",
+        "forcible": "Có gì mới trong 2.70.1\n1.Sự kiện mới ra mắt: Đập vỡ quả trứng vàng.\n2.Tối ưu hóa tốc độ vào game."
+      },
+      "zh_CN": {
+        "normal": "版本更新公告 2.70.1\n1.新活动上线：砸金蛋\n2.优化了游戏进入的速度",
+        "forcible": "版本更新公告 2.70.1\n1.新活动上线：砸金蛋\n2.优化了游戏进入的速度"
+      },
+      "zh_TW": {
+        "normal": "版本更新公告 2.70.1\n1.新活動上線：砸金蛋\n2.優化了遊戲進入的速度",
+        "forcible": "版本更新公告 2.70.1\n1.新活動上線：砸金蛋\n2.優化了遊戲進入的速度"
+      }
+    },
+    "forceUpdate": false,
+    "newVersionCode": 1,
+    "smallerThanVersion": 1,
+    "forceUpdateMinVersionCode": 1,
+    "forceUpdateMaxVersionCode": 1,
+    "domainSwitchThresholdVersion": 1,
+    "checkOpenGLVersion2": 3999.0,
+    "needTobeForceUpdateVersions": [
+      "999999.6.3"
+    ],
+    "status": 1,
+    "url": "https://mega.nz/file/HpQ3DL4Y#rf-RnJ65-8haJcHLABMI-S4uAFu9VSYuH32d17kj5_w"
+  }
+}

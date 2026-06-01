@@ -1,0 +1,166 @@
+# 先锋服配置
+
+defaultInstanceType: m5.large
+defaultServiceCount: 2
+defaultServiceCpu: 0.3
+defaultServiceMemory: 0.75
+
+serviceTypes:
+  - type: service
+    instanceType: m5.large
+    cpu: 0.2
+    memory: 0.26
+    count: 2
+    remix: remixinstall
+  - type: center
+    instanceType: m5.large
+    cpu: 0.3
+    memory: 0.41
+    count: 2
+    remix: remixinstall
+  - type: gateway
+    instanceType: m5.large
+    cpu: 0.5
+    memory: 1.1
+    count: 2
+    remix: remixinstall
+  - type: eureka
+    instanceType: t2.small
+    cpu: 0.5
+    memory: 1
+    count: 2
+
+services:
+  - name: message-process
+    cpu: 0.31
+    memory: 0.5
+    count: 2
+  - name: pay-service
+    count: 1
+  - name: shop-serivce
+    count: 1
+  - name: mailbox-center
+    count: 1
+  - name: mailbox-service
+    count: 1
+  - name: activity-service
+    count: 1
+  - name: singleton-service
+    count: 1
+  - name: web-service
+    count: 1
+  - name: friend-service
+    count: 1
+  - name: friend-center
+    count: 1
+  - name: clan-service
+    count: 1
+  - name: clan-center
+    count: 1
+  - name: geoinfo-service
+    count: 1
+  - name: gameaide-service
+    cpu: 0.32
+    memory: 0.6
+
+serviceNames:
+  - decoration-center
+  - game-center
+  - friend-center
+  - clan-center
+  - user-center
+  - auth-center
+  - msg-center
+  - mailbox-center
+  - pay-center
+  - gamedata-center
+  - editorpay-center
+
+  - decoration-service
+  - game-service
+  - friend-service
+  - message-process
+  - clan-service
+  - user-service
+  - mailbox-service
+  - msg-service
+  - charmingtown-service
+  - pay-service
+  - activity-service
+  - gamedata-service
+  - shop-service
+  - singleton-service
+  - web-service
+  - gameaide-service
+  - admin-service
+  - geoinfo-service
+  - editorpay-service
+  - statistic-service
+  
+  - eureka-service
+  - gateway-service
+
+# base.08 image id
+imageId: ami-007e4a6a51029bc8b
+securityGroups: ['sg-197ed970', 'sg-07e6bfe775f6394e8', 'sg-051fb9735c1be38c7']
+#securityGroups: ['default', 'bmg.webservice', 'prometheus-service-port']
+vpcId: vpc-5bac6532
+tags:
+  namespace: webservice-01
+  lang: java
+
+targetGroupEnalbed: false
+targetGroups:
+  # - service: gamedata-service
+  #   arn: arn:aws-cn:elasticloadbalancing:cn-northwest-1:733520899135:targetgroup/gamedata-instances/70602570dda031ed
+  # - service: gateway-service
+  #   arn: arn:aws:elasticloadbalancing:us-east-1:163639519626:targetgroup/xyx-gateway/6c7cc32df074e677
+
+# 预留cpu给操作系统使用
+reservedCpu: 
+  # fixed: 固定大小，fixed-service: 按服务数量叠加，每个服务固定大小
+  strategy: fixed
+  value: 0.4
+
+# 预留内存给操作系统使用
+reservedMemory: 
+  # fixed: 固定大小，fixed-service: 按服务数量叠加，每个服务固定大小
+  strategy: fixed
+  value: 0.8
+
+instanceTypeDetails:
+  - name: c4.large
+    cpu: 2
+    memory: 3.75
+  - name: m4.large
+    cpu: 2
+    memory: 8
+  - name: t2.small
+    cpu: 1
+    memory: 2
+  - name: c5.large
+    cpu: 2
+    memory: 3.62
+  - name: c5.xlarge
+    cpu: 4
+    memory: 8
+  - name: m5.large
+    cpu: 2
+    memory: 7.51
+  - name: m5.xlarge
+    cpu: 4
+    memory: 16
+  - name: t2.micro
+    cpu: 1
+    memory: 1    
+
+profiles:
+  us-east-1: oversea
+  ap-northeast-2: oversea
+  cn-northwest-1: ningxia
+  us-east-2: ohio
+
+staticConfigs:
+  bucket: blockmango-res
+  groupKey: monitoring/config/ohio/webservice-groups.json
+  nodeGroupKey: monitoring/config/ohio/webservice-nodes-groups.json

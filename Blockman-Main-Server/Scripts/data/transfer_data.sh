@@ -1,0 +1,75 @@
+#!/bin/bash
+
+# user=root
+# password=devPassw0rd
+# host=localhost
+
+user=sandbox
+password=sbshenqi:64
+host=restore-bmg-db-statistic-for-paystats-cluster.cluster-ctwqdkzusa7e.us-east-1.rds.amazonaws.com
+
+function create_table() {
+    table_name=app_daily_device_$1_1
+    mysql -h $host -u $user -p$password -D statisticdb << EOF
+    CREATE TABLE if not exists $table_name (
+        id int(11) NOT NULL AUTO_INCREMENT,
+        device_id varchar(150) DEFAULT NULL,
+        country varchar(10) DEFAULT NULL,
+        app_type varchar(50),
+        mymonth varchar(10) NOT NULL,
+        PRIMARY KEY (id), 
+        UNIQUE KEY device_id (device_id)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+EOF
+}
+
+function execute() {
+    mysql -h $host -u $user -p$password -D statisticdb -e "$1"
+}
+
+function trasfer_data() {
+    sql="insert IGNORE into app_daily_device_$1_1 (id, device_id, country, app_type, mymonth) select id, device_id, country, app_type, month(create_time) from app_daily_device_$2"
+    echo "execute sql query: $sql"
+    execute "$sql"
+}
+
+function trasfer() {
+    startdate='2020-02-13'
+    enddate='2026-06-30'
+
+    enddate=$( date -d "$enddate + 1 day" +%Y%m%d )   # rewrite in YYYYMMDD format
+                                                    #  and take last iteration into account
+    thedate=$( date -d "$startdate" +%Y%m%d )
+    while [ "$thedate" != "$enddate" ]; do
+        month=$(date -d $thedate +%m)
+        echo 'The date is' "$thedate" "$month"
+
+        create_table $month
+        trasfer_data $month $thedate
+
+        thedate=$( date -d "$thedate + 1 days" +%Y%m%d ) # increment by one day
+    done
+}
+
+trasfer
+
+function export_to_csv() {
+    echo $1 $2
+    mysql -h $host -u $user -p$password -D statisticdb -Bse "$1" | sed 's/\t/","/g;s/^/"/;s/$/"/;s/\n//g' > $2.csv
+}
+
+function daily_active() {
+    export_to_csv "select country, count(id), '$1' as num from app_daily_device_$1_1 where app_type = 'android' group by country" $1
+}
+
+daily_active 02
+daily_active 03
+daily_active 04
+daily_active 05
+daily_active 06
+
+function pay_stats() {
+    export_to_csv "select month(create_time) as month, country, count(distinct(user_id)) as user_num, sum(price) as money from app_user_pay where app_type = 'android' group by country, month(create_time)" "paystats"
+}
+
+pay_stats

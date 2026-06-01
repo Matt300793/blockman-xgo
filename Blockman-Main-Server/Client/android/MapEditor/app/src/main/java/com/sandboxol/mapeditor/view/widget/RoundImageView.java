@@ -1,0 +1,198 @@
+package com.sandboxol.mapeditor.view.widget;
+
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.Bitmap;
+import android.graphics.BitmapShader;
+import android.graphics.Canvas;
+import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.graphics.RectF;
+import android.graphics.Shader.TileMode;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.os.Parcelable;
+import android.util.AttributeSet;
+import android.util.TypedValue;
+import android.widget.ImageView;
+
+import com.sandboxol.mapeditor.R;
+
+public class RoundImageView extends ImageView {
+    /**
+     * 图片的类型，圆形or圆角
+     */
+    private int type;
+    public static final int TYPE_CIRCLE = 0;
+    public static final int TYPE_ROUND = 1;
+    /**
+     * 圆角大小的默认值
+     */
+    private static final int BORDER_RADIUS_DEFAULT = 0;
+    /**
+     * 圆角的大小
+     */
+    private int borderRadius;
+    /**
+     * 绘图的Paint
+     */
+    private Paint bitmapPaint;
+    /**
+     * 圆角的半径
+     */
+    private int radius;
+    /**
+     * 3x3 矩阵，主要用于缩小放大
+     */
+    private Matrix matrix;
+    /**
+     * view的宽度
+     */
+    private int width;
+    private RectF roundRect;
+
+    public RoundImageView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        matrix = new Matrix();
+        bitmapPaint = new Paint();
+        bitmapPaint.setAntiAlias(true);
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.RoundImageView);
+        borderRadius = a.getDimensionPixelSize(R.styleable.RoundImageView_borderRadius,
+                (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                        BORDER_RADIUS_DEFAULT, getResources().getDisplayMetrics()));
+        type = a.getInt(R.styleable.RoundImageView_type, TYPE_CIRCLE);
+        a.recycle();
+    }
+
+    public RoundImageView(Context context) {
+        this(context, null);
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+
+        /**
+         * 如果类型是圆形，则强制改变view的宽高一致，以小值为准
+         */
+        if (type == TYPE_CIRCLE) {
+            width = Math.min(getMeasuredWidth(), getMeasuredWidth());
+            radius = width / 2;
+            setMeasuredDimension(width, width);
+        }
+
+    }
+
+    /**
+     * 初始化BitmapShader
+     */
+    private void setUpShader() {
+        Drawable drawable = getDrawable();
+        if (drawable == null) {
+            return;
+        }
+
+        Bitmap bmp = drawableToBitmap(drawable);
+
+        BitmapShader mBitmapShader = new BitmapShader(bmp, TileMode.CLAMP, TileMode.CLAMP);
+        float scale = 1.0f;
+        if (type == TYPE_CIRCLE) {
+            // 拿到bitmap宽或高的小值
+            int bSize = Math.min(bmp.getWidth(), bmp.getHeight());
+            scale = width * 1.0f / bSize;
+
+        } else if (type == TYPE_ROUND) {
+            if (!(bmp.getWidth() == getWidth() && bmp.getHeight() == getHeight())) {
+                // 如果图片的宽或者高与view的宽高不匹配，计算出需要缩放的比例；缩放后的图片的宽高，一定要大于我们view的宽高；所以我们这里取大值；
+                scale = Math.max(getWidth() * 1.0f / bmp.getWidth(), getHeight() * 1.0f / bmp.getHeight());
+            }
+        }
+        // shader的变换矩阵，我们这里主要用于放大或者缩小
+        matrix.setScale(scale, scale);
+        // 设置变换矩阵
+        mBitmapShader.setLocalMatrix(matrix);
+        // 设置shader
+        bitmapPaint.setShader(mBitmapShader);
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        if (getDrawable() == null) {
+            return;
+        }
+        setUpShader();
+        if (type == TYPE_ROUND) {
+            canvas.drawRoundRect(roundRect, borderRadius, borderRadius,
+                    bitmapPaint);
+        } else {
+            canvas.drawCircle(radius, radius, radius, bitmapPaint);
+        }
+    }
+
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+
+        if (type == TYPE_ROUND)
+            roundRect = new RectF(0, 0, w, h);
+    }
+
+    /**
+     * drawable转bitmap
+     *
+     * @param drawable
+     * @return
+     */
+    private Bitmap drawableToBitmap(Drawable drawable) {
+        if (drawable instanceof BitmapDrawable) {
+            BitmapDrawable bd = (BitmapDrawable) drawable;
+            return bd.getBitmap();
+        }
+        int w = drawable.getIntrinsicWidth();
+        int h = drawable.getIntrinsicHeight();
+        Bitmap bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        drawable.setBounds(0, 0, w, h);
+        drawable.draw(canvas);
+        return bitmap;
+    }
+
+    private static final String STATE_INSTANCE = "state_instance";
+    private static final String STATE_TYPE = "state_type";
+    private static final String STATE_BORDER_RADIUS = "state_border_radius";
+
+    @Override
+    protected Parcelable onSaveInstanceState() {
+        Bundle bundle = new Bundle();
+        bundle.putParcelable(STATE_INSTANCE, super.onSaveInstanceState());
+        bundle.putInt(STATE_TYPE, type);
+        bundle.putInt(STATE_BORDER_RADIUS, borderRadius);
+        return bundle;
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Parcelable state) {
+        if (state instanceof Bundle) {
+            Bundle bundle = (Bundle) state;
+            super.onRestoreInstanceState(((Bundle) state)
+                    .getParcelable(STATE_INSTANCE));
+            this.type = bundle.getInt(STATE_TYPE);
+            this.borderRadius = bundle.getInt(STATE_BORDER_RADIUS);
+        } else {
+            super.onRestoreInstanceState(state);
+        }
+
+    }
+
+    public void setType(int type) {
+        if (this.type != type) {
+            this.type = type;
+            if (this.type != TYPE_ROUND && this.type != TYPE_CIRCLE) {
+                this.type = TYPE_CIRCLE;
+            }
+            requestLayout();
+        }
+    }
+
+}

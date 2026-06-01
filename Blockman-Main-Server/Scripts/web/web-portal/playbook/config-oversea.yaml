@@ -1,0 +1,227 @@
+defaultInstanceType: c5.large
+defaultServiceCount: 2
+defaultServiceCpu: 0.3
+defaultServiceMemory: 0.75
+
+serviceTypes:
+  - type: service
+    instanceType: c5.large
+    cpu: 0.3
+    memory: 0.6
+    count: 2
+  - type: center
+    instanceType: c5.large
+    cpu: 0.5
+    memory: 1.1
+    count: 2
+  - type: gateway
+    instanceType: m5.large
+    cpu: 1.5
+    memory: 5.5
+    count: 2
+  - type: eureka
+    instanceType: c5.large
+    cpu: 1.5
+    memory: 3
+    count: 2
+
+services:
+  - name: activity-service
+    cpu: 0.81
+    memory: 0.4
+    count: 3
+  - name: auth-center
+    cpu: 0.31
+    memory: 0.8
+    count: 6
+  - name: charmingtown-service
+    cpu: 0.41
+    memory: 0.8
+    count: 2
+  - name: clan-center
+    cpu: 0.6
+    memory: 0.81
+    count: 6
+  - name: clan-service
+    cpu: 0.2
+    count: 3
+  - name: decoration-center
+    cpu: 1.1
+    memory: 1.21
+    count: 6
+  - name: decoration-service
+    cpu: 0.6
+    count: 6
+  - name: friend-center
+    cpu: 0.9
+    count: 6
+  - name: friend-service
+    cpu: 0.79
+    memory: 0.8
+    count: 5
+  - name: game-center
+    cpu: 1.0
+    memory: 1.21
+    count: 7
+  - name: game-service
+    cpu: 0.5
+    count: 5
+  - name: gameaide-service
+    cpu: 0.1
+    count: 2
+  - name: gateway-service
+    count: 6
+  - name: mailbox-center
+    cpu: 0.8
+    memory: 1.2
+    count: 2
+  - name: mailbox-service
+    cpu: 0.31
+    memory: 0.4
+    count: 2
+  - name: msg-center
+    cpu: 0.79
+    memory: 1
+    count: 6
+  - name: message-process
+    cpu: 0.61
+    memory: 1
+    count: 2
+  - name: msg-service
+    cpu: 0.3
+    memory: 0.5
+    count: 3
+  - name: pay-center
+    cpu: 0.31
+    memory: 0.7
+    count: 5
+  - name: pay-service
+    cpu: 0.4
+    count: 3
+  - name: shop-service
+    cpu: 0.2
+    memory: 0.4
+    count: 3
+  - name: user-center
+    cpu: 0.6
+    memory: 1
+    count: 6
+  - name: user-service
+    cpu: 0.91
+    memory: 0.8
+    count: 4
+  - name: singleton-service
+    cpu: 0.2
+    count: 1
+  - name: web-service
+    cpu: 0.1
+    memory: 0.3
+    count: 2
+  - name: backpack-center
+    cpu: 0.8
+    memory: 1.2
+    count: 2
+  - name: backpack-service
+    cpu: 0.6
+    memory: 1.0
+    count: 3
+
+serviceNames:
+  - decoration-center
+  - game-center
+  - friend-center
+  - clan-center
+  - user-center
+  - auth-center
+  - msg-center
+  - mailbox-center
+  - pay-center
+  - backpack-center
+
+  - decoration-service
+  - game-service
+  - friend-service
+  - message-process
+  - clan-service
+  - user-service
+  - mailbox-service
+  - msg-service
+  - charmingtown-service
+  - pay-service
+  - activity-service
+  # - gamedata-service
+  - shop-service
+  - singleton-service
+  - web-service
+  - gameaide-service
+  - backpack-service
+  - gtemporary-service
+  - stemporary-service
+  - route-service
+  - notice-service
+  - process-service
+  
+  - eureka-service
+  - gateway-service
+
+reservedInstance:
+  - serviceType: service
+    instanceType: m5.large
+    count: 10
+
+# base.08 image id
+imageId: ami-0adcaef2bd1212e9c
+securityGroups: ['default', 'bmg.webservice', 'prometheus-service-port']
+vpcId: vpc-1d079e79
+tags:
+  namespace: webservice-01
+  lang: java
+
+targetGroupEnalbed: true
+targetGroups:
+  - service: decoration-center
+    arn: arn:aws:elasticloadbalancing:us-east-1:163639519626:targetgroup/xyx-decoration-center/24e27ed17fbcbecf
+  - service: game-center
+    arn: arn:aws:elasticloadbalancing:us-east-1:163639519626:targetgroup/xyx-game-center/59c68b158f7ea61a
+  # - service: gamedata-service
+  #   arn: arn:aws-cn:elasticloadbalancing:cn-northwest-1:733520899135:targetgroup/gamedata-instances/70602570dda031ed
+  # - service: gateway-service
+  #   arn: arn:aws:elasticloadbalancing:us-east-1:163639519626:targetgroup/xyx-gateway/6c7cc32df074e677
+  - service: user-service
+    arn: arn:aws:elasticloadbalancing:us-east-1:163639519626:targetgroup/user-service-instances/120c65f72c20ce77
+  - service: web-service
+    arn: arn:aws:elasticloadbalancing:us-east-1:163639519626:targetgroup/xyx-web-service/fb0a9a9600d12afe
+
+# 预留cpu给操作系统使用
+reservedCpu: 0.3
+# 预留内存给操作系统使用
+reservedMemory: 0.5
+instanceTypeDetails:
+  - name: c4.large
+    cpu: 2
+    memory: 3.75
+  - name: m4.large
+    cpu: 2
+    memory: 8
+  - name: t2.small
+    cpu: 1
+    memory: 2
+  - name: c5.large
+    cpu: 2
+    memory: 4
+  - name: c5.xlarge
+    cpu: 4
+    memory: 8
+  - name: m5.large
+    cpu: 2
+    memory: 8
+  - name: m5.xlarge
+    cpu: 4
+    memory: 16
+
+profiles:
+  us-east-1: oversea
+  cn-northwest-1: ningxia
+
+repo_dir: /home/console/src/pickaxe
+build_dir: /home/console/webservice/web-portal/build

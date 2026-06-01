@@ -1,0 +1,274 @@
+# 国内正式服配置
+defaultInstanceType: c5.large
+defaultServiceCount: 2
+defaultServiceCpu: 0.3
+defaultServiceMemory: 0.75
+
+serviceTypes:
+  - type: service
+    instanceType: m5.large
+    cpu: 0.3
+    memory: 0.5
+    count: 2
+    remix: remixinstall
+  - type: center
+    instanceType: c5.large
+    cpu: 0.4
+    memory: 0.7
+    count: 2
+    remix: remixinstall
+  - type: gateway
+    instanceType: c5.large
+    cpu: 1.5
+    memory: 2.0
+    count: 2
+  - type: eureka
+    instanceType: t2.medium
+    cpu: 1.5
+    memory: 2.0
+    count: 2
+
+services:
+  - name: gamedata-service
+    instanceType: c5.large
+    cpu: 1.5
+    memory: 2
+    count: 2
+  - name: activity-service
+    instanceType: c5.large
+    cpu: 1.5
+    memory: 1.2
+    count: 1
+  - name: auth-center
+    cpu: 0.4
+    memory: 0.8
+    count: 2
+  - name: charmingtown-service
+    cpu: 0.4
+    memory: 0.8
+    count: 1
+  - name: clan-center
+    cpu: 0.61
+    memory: 0.8
+    count: 2
+  - name: clan-service
+    cpu: 0.21
+    memory: 0.8
+    count: 2
+  - name: decoration-center
+    cpu: 0.9
+    memory: 1
+    count: 2
+  - name: decoration-service
+    cpu: 0.55
+    memory: 1
+    count: 2
+  - name: friend-center
+    cpu: 0.8
+    memory: 0.9
+    count: 2
+  - name: friend-service
+    cpu: 0.7
+    memory: 1.2
+    count: 2
+  - name: game-center
+    cpu: 1
+    memory: 1.0
+    count: 2
+  - name: game-service
+    cpu: 0.5
+    memory: 0.9
+    count: 2
+  - name: gameaide-service
+    cpu: 0.5
+    memory: 0.8
+    count: 2
+  - name: gateway-service
+    count: 2
+  - name: mailbox-center
+    cpu: 0.4
+    memory: 0.83
+    count: 1
+  - name: mailbox-service
+    cpu: 0.3
+    memory: 0.7
+    count: 1
+  - name: msg-center
+    cpu: 0.75
+    memory: 1
+    count: 1
+  - name: message-process
+    cpu: 0.65
+    memory: 1.2
+    count: 1
+  - name: msg-service
+    cpu: 0.3
+    memory: 0.5
+    count: 1
+  - name: pay-center
+    cpu: 0.51
+    memory: 1
+    count: 2
+  - name: pay-service
+    cpu: 0.3
+    memory: 0.7
+    count: 1
+  - name: shop-service
+    cpu: 0.3
+    memory: 0.45
+    count: 1
+  - name: user-center
+    cpu: 0.8
+    memory: 0.9
+    count: 2
+  - name: user-service
+    cpu: 0.6
+    memory: 0.8
+    count: 2
+  - name: singleton-service
+    cpu: 0.2
+    count: 1
+  - name: web-service
+    cpu: 0.2
+    memory: 0.32
+    count: 1
+  - name: admin-service
+    cpu: 0.1
+    memory: 0.3
+    count: 1
+  - name: geoinfo-service
+    cpu: 0.3
+    memory: 0.8
+    count: 1
+  - name: gamedata-center
+    cpu: 0.5
+    memory: 1.1
+    count: 2
+  - name: editorpay-center
+    cpu: 0.52
+    memory: 0.5
+    count: 1
+  - name: editorpay-service
+    cpu: 0.5
+    memory: 0.5
+    count: 1
+  - name: statistic-service
+    cpu: 0.7
+    memory: 1.2
+    count: 1
+  - name: editorstatistic-service
+    cpu: 0.7
+    memory: 0.8
+    count: 1
+  - name: ranking-service
+    cpu: 0.7
+    memory: 0.6
+    count: 1
+  - name: video-service
+    cpu: 0.7
+    memory: 0.6
+    count: 1
+
+serviceNames:
+  - decoration-center
+  - game-center
+  - friend-center
+  - clan-center
+  - user-center
+  - auth-center
+  - msg-center
+  - mailbox-center
+  - pay-center
+  - gamedata-center
+  - editorpay-center
+  - eureka-service
+
+  - decoration-service
+  - game-service
+  - friend-service
+  - message-process
+  - clan-service
+  - user-service
+  - mailbox-service
+  - msg-service
+  - charmingtown-service
+  - pay-service
+  - activity-service
+  - gamedata-service
+  - shop-service
+  - singleton-service
+  - web-service
+  - gameaide-service
+  - admin-service
+  - geoinfo-service
+  - editorpay-service
+  - statistic-service
+  - gateway-service
+  - editorstatistic-service
+  - ranking-service
+  - video-service
+
+# base.13 image id
+imageId: ami-0d3b0e9aa7029636f
+# securityGroups: ['default', 'bmg.webservice']
+securityGroups: ['sg-a2722fcb', 'sg-005d8a794ee8c1edd']
+vpcId: vpc-2ab21d43
+tags:
+  namespace: 01-webservice
+  lang: java
+
+targetGroupEnalbed: true
+targetGroups:
+  - service: admin-service
+    arn: arn:aws-cn:elasticloadbalancing:cn-northwest-1:733520899135:targetgroup/admin-servicee/0e3d1c2bac68c30a
+    port: 8892
+  - service: gateway-service
+    arn: arn:aws-cn:elasticloadbalancing:cn-northwest-1:733520899135:targetgroup/gateway-service/d0250e619553f9d6
+    port: 8899
+  - service: web-service
+    arn: arn:aws-cn:elasticloadbalancing:cn-northwest-1:733520899135:targetgroup/web-service/bdffde278186b1e6
+    port: 8831
+  - service: gamedata-service
+    arn: arn:aws-cn:elasticloadbalancing:cn-northwest-1:733520899135:targetgroup/gamedata-service/779c98b47eb6eb9c
+    port: 8910
+
+# 预留cpu给操作系统使用
+reservedCpu: 
+  # fixed: 固定大小，fixed-service: 按服务数量叠加，每个服务固定大小
+  strategy: fixed
+  value: 0.3
+
+# 预留内存给操作系统使用
+reservedMemory: 
+  # fixed: 固定大小，fixed-service: 按服务数量叠加，每个服务固定大小
+  strategy: fixed
+  value: 0.5
+
+instanceTypeDetails:
+  - name: c4.large
+    cpu: 2
+    memory: 3.75
+  - name: c5.large
+    cpu: 2
+    memory: 3.75
+  - name: m4.large
+    cpu: 2
+    memory: 8
+  - name: m5.large
+    cpu: 2
+    memory: 8
+  - name: t2.small
+    cpu: 1
+    memory: 2
+  - name: t2.medium
+    cpu: 2
+    memory: 3.75
+
+profiles:
+  us-east-1: oversea
+  cn-northwest-1: ningxia
+
+staticConfigs:
+  bucket: blockmango-res
+  groupKey: monitoring/config/cn_prod/webservice-groups.json
+  nodeGroupKey: monitoring/config/cn_prod/webservice-nodes-groups.json

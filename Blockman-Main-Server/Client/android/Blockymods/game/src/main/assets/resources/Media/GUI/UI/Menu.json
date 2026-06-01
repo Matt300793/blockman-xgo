@@ -1,0 +1,296 @@
+{
+    "Dialog": {
+        "Window": {
+            "Type": "Layout",
+            "Name": "Menu",
+            "Property": [
+                {
+                    "Name": "Area",
+                    "Value": "{{0,0},{0,0},{1,0},{1,0}}"
+                },
+                {
+                    "Name": "LayoutBackImage",
+                    "Value": "set:gui_material.json image:gui_meng_layer"
+                }
+            ],
+            "Window": [
+                {
+                    "Type": "StaticImage",
+                    "Name": "Menu-bg",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,0},{0,0},{1,0},{1,0}}"
+                        },
+                        {
+                            "Name": "ImageName",
+                            "Value": "set:gui_material.json image:gui_meng_layer"
+                        },
+                        {
+                            "Name": "HexgonTopImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonTopColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonSideImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonSideColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonOverlayerImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonOverlayerColor",
+                            "Value": "1 1 1 1"
+                        }
+                    ]
+                },
+                {
+                    "Type": "StaticImage",
+                    "Name": "Menu-Btn-bg",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,0},{0,170},{0,458},{0,542}}"
+                        },
+                        {
+                            "Name": "HorizontalAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "StretchType",
+                            "Value": "NineGrid"
+                        },
+                        {
+                            "Name": "StretchOffset",
+                            "Value": "20 20 20 20"
+                        },
+                        {
+                            "Name": "ImageName",
+                            "Value": "set:gui_material.json image:gui_bg"
+                        },
+                        {
+                            "Name": "HexgonTopImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonTopColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonSideImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonSideColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonOverlayerImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonOverlayerColor",
+                            "Value": "1 1 1 1"
+                        }
+                    ],
+                    "Window": [
+                        {
+                            "Type": "Button",
+                            "Name": "Menu-Back-Game",
+                            "Property": [
+                                {
+                                    "Name": "Area",
+                                    "Value": "{{0,38},{0,36},{0,424},{0,118}}"
+                                },
+                                {
+                                    "Name": "Text",
+                                    "Value": "回到游戏"
+                                },
+                                {
+                                    "Name": "StretchType",
+                                    "Value": "NineGrid"
+                                },
+                                {
+                                    "Name": "StretchOffset",
+                                    "Value": "40 40 40 40"
+                                },
+                                {
+                                    "Name": "NormalImage",
+                                    "Value": "set:gui_material.json image:btn_bg_green"
+                                },
+                                {
+                                    "Name": "PushedImage",
+                                    "Value": "set:gui_material.json image:btn_bg_green"
+                                },
+                                {
+                                    "Name": "SoundName",
+                                    "Value": ""
+                                },
+                                {
+                                    "Name": "TextRenderOffset",
+                                    "Value": "0 -2"
+                                },
+                                {
+                                    "Name": "HexgonTopImage",
+                                    "Value": ""
+                                },
+                                {
+                                    "Name": "HexgonTopColor",
+                                    "Value": "1 1 1 1"
+                                },
+                                {
+                                    "Name": "HexgonSideImage",
+                                    "Value": ""
+                                },
+                                {
+                                    "Name": "HexgonSideColor",
+                                    "Value": "1 1 1 1"
+                                },
+                                {
+                                    "Name": "HexgonOverlayerImage",
+                                    "Value": ""
+                                },
+                                {
+                                    "Name": "HexgonOverlayerColor",
+                                    "Value": "1 1 1 1"
+                                }
+                            ]
+                        },
+                        {
+                            "Type": "Button",
+                            "Name": "Menu-Game-Setting",
+                            "Property": [
+                                {
+                                    "Name": "Area",
+                                    "Value": "{{0,38},{0,148},{0,424},{0,230}}"
+                                },
+                                {
+                                    "Name": "Text",
+                                    "Value": "游戏设置"
+                                },
+                                {
+                                    "Name": "StretchType",
+                                    "Value": "NineGrid"
+                                },
+                                {
+                                    "Name": "StretchOffset",
+                                    "Value": "40 40 40 40"
+                                },
+                                {
+                                    "Name": "NormalImage",
+                                    "Value": "set:gui_material.json image:btn_bg_blue"
+                                },
+                                {
+                                    "Name": "PushedImage",
+                                    "Value": "set:gui_material.json image:btn_bg_blue"
+                                },
+                                {
+                                    "Name": "SoundName",
+                                    "Value": ""
+                                },
+                                {
+                                    "Name": "TextRenderOffset",
+                                    "Value": "0 -2"
+                                },
+                                {
+                                    "Name": "HexgonTopImage",
+                                    "Value": ""
+                                },
+                                {
+                                    "Name": "HexgonTopColor",
+                                    "Value": "1 1 1 1"
+                                },
+                                {
+                                    "Name": "HexgonSideImage",
+                                    "Value": ""
+                                },
+                                {
+                                    "Name": "HexgonSideColor",
+                                    "Value": "1 1 1 1"
+                                },
+                                {
+                                    "Name": "HexgonOverlayerImage",
+                                    "Value": ""
+                                },
+                                {
+                                    "Name": "HexgonOverlayerColor",
+                                    "Value": "1 1 1 1"
+                                }
+                            ]
+                        },
+                        {
+                            "Type": "Button",
+                            "Name": "Menu-Exit-Game",
+                            "Property": [
+                                {
+                                    "Name": "Area",
+                                    "Value": "{{0,38},{0,260},{0,424},{0,342}}"
+                                },
+                                {
+                                    "Name": "Text",
+                                    "Value": "返回平台"
+                                },
+                                {
+                                    "Name": "StretchType",
+                                    "Value": "NineGrid"
+                                },
+                                {
+                                    "Name": "StretchOffset",
+                                    "Value": "40 40 40 40"
+                                },
+                                {
+                                    "Name": "NormalImage",
+                                    "Value": "set:gui_material.json image:btn_bg_red"
+                                },
+                                {
+                                    "Name": "PushedImage",
+                                    "Value": "set:gui_material.json image:btn_bg_red"
+                                },
+                                {
+                                    "Name": "SoundName",
+                                    "Value": ""
+                                },
+                                {
+                                    "Name": "TextRenderOffset",
+                                    "Value": "0 -2"
+                                },
+                                {
+                                    "Name": "HexgonTopImage",
+                                    "Value": ""
+                                },
+                                {
+                                    "Name": "HexgonTopColor",
+                                    "Value": "1 1 1 1"
+                                },
+                                {
+                                    "Name": "HexgonSideImage",
+                                    "Value": ""
+                                },
+                                {
+                                    "Name": "HexgonSideColor",
+                                    "Value": "1 1 1 1"
+                                },
+                                {
+                                    "Name": "HexgonOverlayerImage",
+                                    "Value": ""
+                                },
+                                {
+                                    "Name": "HexgonOverlayerColor",
+                                    "Value": "1 1 1 1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
