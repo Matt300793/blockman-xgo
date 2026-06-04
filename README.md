@@ -1,21 +1,15 @@
-# bmf API update
-Open source my modify bmf api so u can use it for making ur bg apps but this is my old bmf api and i have new one which is better if u got it i will kill u
+# bxgo API
+Open source my bxgo api credit by bmf, so dont try to leak ny own api.
 
-# how did i make it work
-ofc i just modify every models folder that using Mariadb i changed it into json database. also there its one issue if u try to modify inside the database.json will automatic reset dont ask me ok
-
-well i made a new one which its better than the old one so dont beg me for the new one but only if authority u to use it
-
-if u wanted to use my lastest bmf api u much not leak it to everyone or else i Will kill u
-
+# where did i get this api
+so obviously, i get this old api from bmf so. i think thats it and im gonna fix every implement and implement own endpoint.
 
 # list to make the api better 
 - [x] update the database into mongoose which its better or just use mariadb
 - [x] update every service folder
-- [x] implement ur own endpoint
+- [x] implement your own endpoint
 
-# setup
-first u need to do it
+# Tutorial
 
 1. install package 
 ```
