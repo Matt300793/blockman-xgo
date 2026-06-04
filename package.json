@@ -1,7 +1,7 @@
 {
-  "name": "bmf-api",
+  "name": "blockman-xgo",
   "version": "1.0.0",
-  "description": "Blockman Forge APIs for Blockman GO v1.9.17",
+  "description": "Blockman xGO APIs for Blockman GO v1.9.17",
   "main": "src/app.js",
   "scripts": {
     "start:server": "nodemon --ignore database src/app.js",
