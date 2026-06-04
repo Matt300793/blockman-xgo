@@ -1,5 +1,0 @@
-coloredlogs
-humanfriendly
-inquirer
-boto3
-PyYAML

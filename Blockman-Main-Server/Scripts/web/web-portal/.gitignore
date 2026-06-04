@@ -1,4 +1,0 @@
-data/*.json
-venv
-.env
-database.db
